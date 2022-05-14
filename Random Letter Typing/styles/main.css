@@ -1,0 +1,65 @@
+:root {
+    --main-bg-color: rgb(63, 48, 90);
+    --secondary-color: white;
+    --tertiary-color: rgb(39, 26, 59);
+    --quaternary-color: rgb(14, 8, 24);
+}
+
+body, input {
+    background-color: var(--main-bg-color);
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h1, h3, p {
+    cursor: default;
+}
+
+h1, h3, p, input {
+    font-family: Consolas;
+    color: var(--secondary-color);
+}
+
+#time-gap {
+    width: 15vw;
+    height: 10vh;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 3em;
+}
+
+#random-letter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6em;
+    font-weight: bolder;
+    color: var(--secondary-color);
+}
+
+.center {
+    margin: 0 auto; 
+    text-align: center;
+}
+
+#button-start, #button-stop {
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--secondary-color);
+    background-color: var(--main-bg-color);
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px;
+}
+
+#button-start:hover, #button-stop:hover {
+    background-color: var(--tertiary-color);
+}
+
+#button-start:active, #button-stop:active {
+    background-color: var(--quaternary-color);
+}

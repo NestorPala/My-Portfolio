@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Typing Practice</title> 
+</head>
+<body>
+    <div class="center">
+        <h1>Typing Practice</h1>
+        <h3>Improve typing speed by typing one random letter at once.</h2>
+
+        <div id="time-between-letters">
+            <p>Time between letters (in seconds):</p>
+            <input type="number" id="time-gap" value="2" min="0.5" max="5" step="0.1">
+        </div>
+        <button id="button-start" onclick="start()">Start Typing!</button>
+
+        <div>
+            <!-- Replace with royalty free image -->
+            <img src="https://www.typing.academy/app/source/public/images/intro/en/keyboard-colors-new3.png" alt="typing-visual-guide">
+        </div>
+
+        <div hidden id="random-letter"></div>
+        <button hidden id="button-stop" onclick="stop()">Stop Typing!</button>
+    </div>
+    <footer>
+        <div class="center">
+            <hr>
+            <p style="font-size: 1.25em">2021. Nestor Arnold.</p>
+            <p>Version 1.0</p>
+        </div>
+    </footer>
+</body>
+<script src="scripts/random-letter.js"></script>
+</html>

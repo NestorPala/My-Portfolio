@@ -46,14 +46,22 @@ const printLetter = letter => {
 }
 
 
-const getLetter = async randomNumberURL => {
-    let letter
+// const getLetter = async randomNumberURL => {
+//     let letter
 
-    await fetch(randomNumberURL)
-    .then(response => response.json())
-    .then(number => getLetterFromASCIICode(number))
-    .then(convertedNumber => {letter = convertedNumber})
+//     await fetch(randomNumberURL)
+//     .then(response => response.json())
+//     .then(number => getLetterFromASCIICode(number))
+//     .then(convertedNumber => {letter = convertedNumber})
 
+//     return letter
+// }
+
+
+const getLetter_ = async (startLetter, stopLetter) => {
+    let delta = stopLetter - startLetter
+    let randomNumber = Math.floor(Math.random() * delta) + startLetter
+    let letter = getLetterFromASCIICode(randomNumber)
     return letter
 }
 
@@ -63,12 +71,18 @@ const changeLetter = async (startLetter, stopLetter) => {
     startLetter = getASCIICodeFromLetter(startLetter)
     stopLetter = getASCIICodeFromLetter(stopLetter)
 
-    let randomNumberURL = "http://www.randomnumberapi.com/api/v1.0/random"
-    randomNumberURL += "?min=" + startLetter
-    randomNumberURL += "&max=" + stopLetter
-    randomNumberURL += "&count=1"
+    // let randomNumberURL = "http://www.randomnumberapi.com/api/v1.0/random"
+    // randomNumberURL += "?min=" + startLetter
+    // randomNumberURL += "&max=" + stopLetter
+    // randomNumberURL += "&count=1"
 
-    let newLetter = await getLetter(randomNumberURL)
+    //let newLetter = await getLetter(randomNumberURL)
+
+    // Temporary, getLetter stopped working because RandomNumberAPI is not responding requests.
+    // The idea now is to fetch a list of true random numbers from RANDOM.ORG,
+    // pop a number from that list and then return it as a letter.
+    // When the number list is empty, we just fetch another bunch of numbers and so on.
+    let newLetter = await getLetter_(startLetter, stopLetter)
 
     printLetter(newLetter)
 }

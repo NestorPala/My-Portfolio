@@ -1,0 +1,42 @@
+body {
+    background-color: #390c50;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    color: antiquewhite;
+}
+
+h1 {
+    color: #20c5ee;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10%;
+}
+
+hr {
+    width: 40%;
+    margin: 70px auto;
+}
+
+
+.project-link{
+    text-decoration: none;
+    color: antiquewhite;
+    display: inline-block;
+    padding: 50px;
+    font-size: 2rem;
+    border: solid 3px transparent;
+}
+
+.project-link:hover {
+    border: solid 3px antiquewhite;
+}
+
+.project-links {
+    text-align: center;
+}

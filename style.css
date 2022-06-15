@@ -7,6 +7,20 @@ footer {
     text-align: center;
 }
 
+footer a {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #20c5ee;
+    text-decoration: none;
+    padding: 7px;
+    border: solid 3px transparent;
+}
+
+footer a:hover {
+    border: solid 3px #20c5ee;
+    background-color: #1e062b;
+}
+
 footer p {
     color: antiquewhite;
 }
@@ -35,6 +49,7 @@ hr {
 
 .project-link:hover {
     border: solid 3px antiquewhite;
+    background-color: #1e062b;
 }
 
 .project-links {

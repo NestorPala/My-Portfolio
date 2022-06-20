@@ -27,6 +27,11 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
+#mobileInput textarea {
+    background-color: var(--main-bg-color);
+    color: var(--secondary-color);
+}
+
 #time-gap {
     width: 15vw;
     height: 10vh;

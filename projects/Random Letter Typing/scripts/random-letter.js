@@ -15,7 +15,8 @@ let description = document.getElementById('description')
 let timeBetweenLetters = document.getElementById('time-between-letters')
 let score = document.getElementById('score')
 let scoreText = document.getElementById('score-text')
-let mobileInput
+let mobileInput = document.getElementById('mobileInput')
+let input
 let hits = 0
 let misses = 0
 
@@ -122,7 +123,7 @@ const registerKey = event => {
 }
 
 
-const closeMobileKeyboard = () => mobileInput.remove()
+const closeMobileKeyboard = () => mobileInput.removeChild(input)
 
 
 const stopTyping = () => {
@@ -136,10 +137,10 @@ const isMobileDevice = () => window.matchMedia("only screen and (max-width: 760p
 
 
 const openMobileKeyboard = () => {
-    mobileInput = document.createElement("textarea")
-    mobileInput.setAttribute("type", "text")
-    stopButton.appendChild(mobileInput)
-    mobileInput.focus()
+    input = document.createElement("textarea")
+    input.setAttribute("type", "text")
+    mobileInput.appendChild(input)
+    input.focus()
 }
 
 

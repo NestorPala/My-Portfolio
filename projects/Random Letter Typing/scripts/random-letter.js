@@ -11,6 +11,12 @@ let timeGapInput = document.getElementById('time-gap')
 let startButton = document.getElementById('button-start')
 let stopButton = document.getElementById('button-stop')
 let randomLetter = document.getElementById('random-letter')
+let description = document.getElementById('description')
+let timeBetweenLetters = document.getElementById('time-between-letters')
+let score = document.getElementById('score')
+let scoreText = document.getElementById('score-text')
+let hits = 0
+let misses = 0
 
 
 const setTimeBetweenLetters = () => {
@@ -43,6 +49,7 @@ const getLetterFromASCIICode = asciiCode => String.fromCharCode(asciiCode)
 const printLetter = letter => {
     randomLetter.innerHTML = letter
     randomLetter.style.color = DEFAULT_LETTER_COLOR
+    score.style.color = DEFAULT_LETTER_COLOR
 }
 
 
@@ -88,14 +95,28 @@ const changeLetter = async (startLetter, stopLetter) => {
 }
 
 
+const getScore = () => Math.round(hits / (hits + misses) * 100)
+
+
 const matchKey = (key) => {
     let keyMatchesRandomLetter = key.toLowerCase() == randomLetter.innerHTML.toLowerCase()
-    randomLetter.style.color = keyMatchesRandomLetter ? CORRECT_LETTER : WRONG_LETTER
+    
+    if (keyMatchesRandomLetter) {
+        randomLetter.style.color = CORRECT_LETTER
+        score.style.color = CORRECT_LETTER
+        hits += 1
+    } else {
+        randomLetter.style.color = WRONG_LETTER
+        score.style.color = WRONG_LETTER
+        misses += 1
+    }
+
+    score.innerHTML = getScore()
 }
 
 
 const registerKey = (event) => {
-    console.log(`The key pressed is: ${event.key}`) //remove later xd
+    // console.log(`The key pressed is: ${event.key}`)
     matchKey(event.key)
 }
 
@@ -107,6 +128,8 @@ const stopTyping = () => {
 
 
 const startTyping = (startLetter, stopLetter) => {
+    hits = 0
+    misses = 0
     changeLetterInterval = setInterval(changeLetter, changeLetterTimeInMiliseconds, startLetter, stopLetter)
     window.addEventListener('keydown', registerKey)
 }
@@ -114,21 +137,29 @@ const startTyping = (startLetter, stopLetter) => {
 
 function stop() {
     stopTyping()
+    description.hidden = false
+    timeBetweenLetters.hidden = false
     timeGapInput.hidden = false
     startButton.hidden = false
     randomLetter.hidden = true
     stopButton.hidden = true
+    scoreText.hidden = true
+    score.innerHTML = 0
     alert("You have stopped typing")
+    alert(`Your accuracy is ${getScore()}%`)
     scrollTo({top: 0, left: 0, behavior: 'smooth'});
 }
 
 
 function start() {
     if (!setTimeBetweenLetters()) return
+    description.hidden = true
+    timeBetweenLetters.hidden = true
     timeGapInput.hidden = true
     startButton.hidden = true
     randomLetter.hidden = false
     stopButton.hidden = false
+    scoreText.hidden = false
     startTyping(START_LETTER, STOP_LETTER) 
     alert("You have started typing")
 }

@@ -1,34 +1,40 @@
 :root {
-    --main-bg-color: #390c50;
+    --main-bg-color: #3b393b;
     --secondary-color: white;
-    --tertiary-color: rgb(39, 26, 59);
-    --quaternary-color: rgb(14, 8, 24);
+    --tertiary-color: rgb(32, 27, 36);
+    --quaternary-color: rgb(0, 0, 0);
 }
 
 body, input {
     background-color: var(--main-bg-color);
 }
 
+footer p {
+    line-height: 0.75em;
+}
+
 h1 {
+    font-family: Consolas;
     font-size: 4em;
 }
 
-h1, h3, p {
+h3, p {
+    font-family: "Open Sans", sans-serif;
     cursor: default;
 }
 
 h1, h3, p, input {
-    font-family: Consolas;
     color: var(--secondary-color);
 }
 
 #time-gap {
     width: 15vw;
     height: 10vh;
-    border-style: solid;
+    border-style: dashed;
     border-color: var(--secondary-color);
     border-radius: 10px;
     padding: 10px;
+    font-family: "Open Sans", sans-serif;
     font-size: 3em;
 }
 
@@ -39,11 +45,6 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
-.center {
-    margin: 0 auto; 
-    text-align: center;
-}
-
 #button-start, #button-stop {
     cursor: pointer;
     border-style: solid;
@@ -52,6 +53,7 @@ h1, h3, p, input {
     background-color: var(--main-bg-color);
     color: white;
     font-size: 1.5em;
+    font-family: "Open Sans", sans-serif;
     padding: 10px;
     margin: 10px;
 }
@@ -62,4 +64,17 @@ h1, h3, p, input {
 
 #button-start:active, #button-stop:active {
     background-color: var(--quaternary-color);
+}
+
+#score-text, #score {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.center {
+    margin: 0 auto; 
+    text-align: center;
 }

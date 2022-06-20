@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Typing Practice</title> 
 </head>
 <body>
     <div class="center">
         <h1>Typing Practice</h1>
-        <h3>Improve typing speed by typing one random letter at once.</h2>
+        <h3 id="description">Improve typing speed by typing one random letter at once.</h3>
 
         <div id="time-between-letters">
             <p>Time between letters (in seconds):</p>
@@ -18,13 +22,16 @@
         </div>
         <button id="button-start" onclick="start()">Start Typing!</button>
 
+        <div hidden id="random-letter"></div>
+        <button hidden id="button-stop" onclick="stop()">Stop Typing!</button>
+        <div hidden id="score-text">
+            Accuracy: <span id="score">0</span>%
+        </div>
+
         <div>
             <!-- Replace with royalty free image -->
             <img src="https://www.typing.academy/app/source/public/images/intro/en/keyboard-colors-new3.png" alt="typing-visual-guide">
         </div>
-
-        <div hidden id="random-letter"></div>
-        <button hidden id="button-stop" onclick="stop()">Stop Typing!</button>
     </div>
     <footer>
         <div class="center">

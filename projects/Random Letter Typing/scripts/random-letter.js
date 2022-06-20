@@ -136,7 +136,7 @@ const isMobileDevice = () => window.matchMedia("only screen and (max-width: 760p
 
 
 const openMobileKeyboard = () => {
-    mobileInput = document.createElement("input")
+    mobileInput = document.createElement("textarea")
     mobileInput.setAttribute("type", "text")
     stopButton.appendChild(mobileInput)
     mobileInput.focus()

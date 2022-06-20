@@ -15,6 +15,7 @@ let description = document.getElementById('description')
 let timeBetweenLetters = document.getElementById('time-between-letters')
 let score = document.getElementById('score')
 let scoreText = document.getElementById('score-text')
+let mobileInput
 let hits = 0
 let misses = 0
 
@@ -98,7 +99,7 @@ const changeLetter = async (startLetter, stopLetter) => {
 const getScore = () => Math.round(hits / (hits + misses) * 100)
 
 
-const matchKey = (key) => {
+const matchKey = key => {
     let keyMatchesRandomLetter = key.toLowerCase() == randomLetter.innerHTML.toLowerCase()
     
     if (keyMatchesRandomLetter) {
@@ -115,23 +116,30 @@ const matchKey = (key) => {
 }
 
 
-const registerKey = (event) => {
+const registerKey = event => {
     // console.log(`The key pressed is: ${event.key}`)
     matchKey(event.key)
 }
 
 
+const closeMobileKeyboard = () => mobileInput.remove()
+
+
 const stopTyping = () => {
     clearInterval(changeLetterInterval)
     window.removeEventListener('keydown', registerKey)
+    if(isMobileDevice()) closeMobileKeyboard()
 }
 
 
 const isMobileDevice = () => window.matchMedia("only screen and (max-width: 760px)").matches;
 
 
-// Temporal fix for mobile
-const openMobileKeyboard = () => stopButton.appendChild(document.createElement("input")).focus()
+const openMobileKeyboard = () => {
+    mobileInput = document.createElement("input")
+    stopButton.appendChild(mobileInput)
+    mobileInput.focus()
+}
 
 
 const startTyping = (startLetter, stopLetter) => {

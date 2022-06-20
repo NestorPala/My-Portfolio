@@ -127,11 +127,19 @@ const stopTyping = () => {
 }
 
 
+const isMobileDevice = () => window.matchMedia("only screen and (max-width: 760px)").matches;
+
+
+// Temporal fix for mobile
+const openMobileKeyboard = () => stopButton.appendChild(document.createElement("input")).focus()
+
+
 const startTyping = (startLetter, stopLetter) => {
     hits = 0
     misses = 0
     changeLetterInterval = setInterval(changeLetter, changeLetterTimeInMiliseconds, startLetter, stopLetter)
     window.addEventListener('keydown', registerKey)
+    if(isMobileDevice()) openMobileKeyboard()
 }
 
 

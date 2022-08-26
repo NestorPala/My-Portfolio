@@ -19,8 +19,12 @@ footer a, nav a {
   border: solid 2px antiquewhite;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   color: #20c5ee;
+}
+
+h5, h6 {
+  font-weight: normal;
 }
 
 hr {

@@ -125,7 +125,7 @@ const registerKey = event => {
     } else {
         key = event.key;
     }
-    
+
     matchKey(key)
 }
 

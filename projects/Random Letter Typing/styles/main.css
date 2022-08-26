@@ -1,3 +1,16 @@
+@media (max-width: 760px) {
+    #keyboard-img {
+        width: 75vw;
+    }
+}
+
+@media (min-width: 760px) {
+    #keyboard-img {
+        width: 35vw;
+    }
+}
+
+
 :root {
     --main-bg-color: #3b393b;
     --secondary-color: white;

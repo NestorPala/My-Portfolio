@@ -118,8 +118,15 @@ const matchKey = key => {
 
 
 const registerKey = event => {
-    // console.log(`The key pressed is: ${event.key}`)
-    matchKey(event.key)
+    let key;
+
+    if (isMobileDevice()) {
+        key = mobileInput.firstChild.value.slice(-1);
+    } else {
+        key = event.key;
+    }
+    
+    matchKey(key)
 }
 
 
@@ -128,7 +135,7 @@ const closeMobileKeyboard = () => mobileInput.removeChild(input)
 
 const stopTyping = () => {
     clearInterval(changeLetterInterval)
-    window.removeEventListener('keydown', registerKey)
+    window.removeEventListener('input', registerKey)
     if(isMobileDevice()) closeMobileKeyboard()
 }
 
@@ -148,8 +155,13 @@ const startTyping = (startLetter, stopLetter) => {
     hits = 0
     misses = 0
     changeLetterInterval = setInterval(changeLetter, changeLetterTimeInMiliseconds, startLetter, stopLetter)
-    window.addEventListener('keydown', registerKey)
-    if(isMobileDevice()) openMobileKeyboard()
+
+    if(isMobileDevice()) {
+        openMobileKeyboard()
+        window.addEventListener('input', registerKey)
+    } else {
+        window.addEventListener('keydown', registerKey)
+    }
 }
 
 

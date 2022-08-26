@@ -1,3 +1,9 @@
+a {
+  color: antiquewhite;
+  text-decoration: underline dotted antiquewhite;
+  text-underline-offset: 5px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -42,12 +48,35 @@ img {
 
 nav {
   text-align: center;
+  margin-top: 30px;
+}
+
+nav a {
+  margin: 10px 10px 0;
+  display: inline-block;
 }
 
 .container {
   padding: 30px;
 }
 
+#contact-me {
+  display: inline;
+}
+
 #disclaimer {
   text-align: center;
+}
+
+#intro {
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  margin: auto;
+}
+
+#pala-photo {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
 }

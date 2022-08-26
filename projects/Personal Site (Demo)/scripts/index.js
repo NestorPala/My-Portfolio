@@ -16,11 +16,16 @@ function listSkills() {
 
     for (let x in skills) {
         let li = document.createElement("li");
-        li.innerHTML = x + "&nbsp;";
-
+    
         for (let i=0; i<skills[x]; i++) {
             li.innerHTML += "⭐";
         }
+
+        for (let i=0; i<5*(5 - skills[x]); i++) {
+            li.innerHTML += "&nbsp;";
+        }
+
+        li.innerHTML += x;
 
         skillList.appendChild(li);
     }

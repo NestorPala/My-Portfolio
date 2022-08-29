@@ -1,13 +1,15 @@
 let skills = {
     "HTML" : 4,
     "CSS" : 3,
-    "JS" : 3,
+    "JavaScript" : 3,
     "Node.js" : 2,
     "PHP" : 2,
     "MySQL" : 3,
     "Git" : 3,
     "Python 3" : 3,
     "C" : 3,
+    "TypeScript" : 3,
+    "Angular 2" : 2
 };
 
 
@@ -16,17 +18,8 @@ function listSkills() {
 
     for (let x in skills) {
         let li = document.createElement("li");
-    
-        for (let i=0; i<skills[x]; i++) {
-            li.innerHTML += "⭐";
-        }
-
-        for (let i=0; i<5*(5 - skills[x]); i++) {
-            li.innerHTML += "&nbsp;";
-        }
-
-        li.innerHTML += x;
-
+        li.setAttribute("style", "display: inline-block; margin: 20px;");
+        li.innerHTML = x;
         skillList.appendChild(li);
     }
 }

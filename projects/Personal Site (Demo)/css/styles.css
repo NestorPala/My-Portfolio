@@ -16,6 +16,7 @@ body {
 
 footer {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 footer a, nav a {
@@ -75,15 +76,11 @@ nav a {
   display: inline;
 }
 
-#disclaimer {
-  text-align: center;
-}
-
 #intro {
   width: fit-content;
   height: fit-content;
   text-align: center;
-  margin: auto;
+  margin: 30px auto 0px auto;
 }
 
 #pala-photo {

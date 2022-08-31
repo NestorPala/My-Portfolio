@@ -86,7 +86,7 @@ h1, h3, p, input {
 
 #score-text, #score {
     text-align: center;
-    font-family: "Open Sans", sans-serif;;
+    font-family: "Open Sans", sans-serif;
     font-size: 2em;
     font-weight: bold;
     color: var(--secondary-color);
@@ -101,4 +101,13 @@ h1, h3, p, input {
 .center {
     margin: 0 auto; 
     text-align: center;
+}
+
+#year {
+    color: var(--secondary-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+#main-page, #year {
+    font-size: 1.25em;
 }

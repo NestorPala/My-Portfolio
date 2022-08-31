@@ -92,6 +92,12 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
+#main-page {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
 .center {
     margin: 0 auto; 
     text-align: center;

@@ -12,6 +12,8 @@ body {
   background-color: #390c50;
   font-family: Montserrat, sans-serif;
   color: antiquewhite;
+  background-image: url("../../../images/pala.png");
+  background-size: 200px 200px;
 }
 
 footer {

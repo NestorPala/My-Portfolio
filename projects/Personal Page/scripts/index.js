@@ -14,6 +14,22 @@ let skills = [
 ];
 
 
+function setGoToTopButton() {
+    let goToTopButton = document.getElementById("go-to-top");
+    goToTopButton.hidden = true;
+    window.onscroll = (e) => {
+        if (window.scrollY !== 0) {
+            goToTopButton.hidden = false;
+        } else {
+            goToTopButton.hidden = true;
+        }
+    };
+    goToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+
 function listSkills() {
     let skillList = document.getElementById("skills").getElementsByTagName("ul")[0];
 
@@ -27,3 +43,4 @@ function listSkills() {
 
 
 listSkills();
+setGoToTopButton();

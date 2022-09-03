@@ -40,7 +40,7 @@ footer p {
 }
 
 h1 {
-    color: antiquewhite;
+    color: white;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 10%;
@@ -58,7 +58,8 @@ hr {
     display: inline-block;
     padding: 50px;
     font-size: 2rem;
-    border: solid 3px transparent;
+    border: solid 3px #1e062b33;
+    border-radius: 10px;
 }
 
 .project-link:hover {
@@ -72,4 +73,11 @@ hr {
 
 #year {
     color: antiquewhite;
+}
+
+#not-ready-yet-message {
+    color: antiquewhite;
+    margin-top: 10px;
+    font-size: 0.5em;
+    font-style: italic;
 }

@@ -1,7 +1,7 @@
 const title = "My Web Portfolio";
 let titleMyPortfolio = document.getElementById("title-my-portfolio");
 let aestheticWriterCursor = document.getElementById("aesthetic-writer-cursor");
-const timeMs = 125;
+const timeMs = 200;
 
 function showTitle(index) {
     if (index == title.length) {

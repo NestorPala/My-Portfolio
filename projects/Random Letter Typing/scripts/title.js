@@ -18,5 +18,5 @@ function showTitle(index) {
     }, timeMs);
 }
 
-aestheticWriterCursor.innerHTML = "";
+aestheticWriterCursor.innerHTML = "_";
 showTitle(0);

@@ -111,3 +111,22 @@ h1, h3, p, input {
 #main-page, #year {
     font-size: 1.25em;
 }
+
+#title-container {
+    text-align: center;
+}
+
+#aesthetic-writer-cursor {
+    color: white;
+    font-size: 3rem;
+    display: inline;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: auto;
+}

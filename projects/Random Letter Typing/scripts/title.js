@@ -1,7 +1,7 @@
-const title = "My Web Portfolio";
-let titleMyPortfolio = document.getElementById("title-my-portfolio");
+const title = "Typing Practice";
+let titleTypingPractice = document.getElementById("title-typing-practice");
 let aestheticWriterCursor = document.getElementById("aesthetic-writer-cursor");
-const timeMs = 125;
+const timeMs = 200;
 
 function showTitle(index) {
     if (index == title.length) {
@@ -9,9 +9,9 @@ function showTitle(index) {
     }
     setTimeout(() => {
         if (index == 0) {
-            titleMyPortfolio.innerHTML = title[index];
+            titleTypingPractice.innerHTML = title[index];
         } else {
-            titleMyPortfolio.innerHTML += title[index];
+            titleTypingPractice.innerHTML += title[index];
         }
         aestheticWriterCursor.innerHTML = aestheticWriterCursor.innerHTML == "" ? "_" : "";
         showTitle(index + 1);

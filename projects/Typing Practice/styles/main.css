@@ -2,37 +2,93 @@
     #keyboard-img {
         width: 75vw;
     }
+    body {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/typewriter-vertical.jpg");
+        background-size: cover;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    footer {
+        font-size: 0.5em;
+        margin-top: 25vh;
+    }
+    #score-container {
+        width: 65%;
+        font-size: 1.25em;
+    }
+    #button-start, #button-stop {
+        font-size: 1.25em;
+    }
+    #description {
+        font-size: 0.75em;
+    }
 }
 
 @media (min-width: 760px) {
     #keyboard-img {
         width: 35vw;
     }
+    body {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/typewriter.jpg");
+        background-size: cover;
+    }
+    h1 {
+        font-size: 4em;
+    }    
+    footer {
+        position: absolute;
+        font-size: 0.75em;
+    }
+    #score-container {
+        width: 30%;
+        font-size: 2em;
+    }
+    #button-start, #button-stop {
+        font-size: 1.5em;
+    }
+    #description {
+        font-size: 1em;
+    }
 }
 
 
 :root {
-    --main-bg-color: #3b393b;
+    --main-bg-color: #1e6853;
     --secondary-color: white;
     --tertiary-color: rgb(32, 27, 36);
     --quaternary-color: rgb(0, 0, 0);
 }
 
-body, input {
-    background-color: var(--main-bg-color);
+* {
+    font-family: 'Fira Code', monospace;
+    
+}
+
+#buttonStart, #buttonStop {
+    background-color: rgba(255, 255, 255, 0);
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+}
+
+#description {
+    font-weight: normal;
+}
+
+footer {
+    text-align: center;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
+    bottom: 0;
 }
 
 footer p {
-    line-height: 0.75em;
-}
-
-h1 {
-    font-family: Consolas;
-    font-size: 4em;
+    line-height: 1.25em;
 }
 
 h3, p {
-    font-family: "Open Sans", sans-serif;
     cursor: default;
 }
 
@@ -40,8 +96,8 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
-#mobileInput textarea {
-    background-color: var(--main-bg-color);
+#mobile-input textarea {
+    background-color: #00000090;
     color: var(--secondary-color);
 }
 
@@ -52,33 +108,41 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
+.letter {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: var(--secondary-color);
+}
+
 #button-start, #button-stop {
     cursor: pointer;
     border-style: solid;
     border-radius: 10px;
     border-color: var(--secondary-color);
-    background-color: var(--main-bg-color);
+    background-color: #00000000;
     color: white;
-    font-size: 1.5em;
-    font-family: "Open Sans", sans-serif;
     padding: 10px;
     margin: 10px;
 }
 
 #button-start:hover, #button-stop:hover {
-    background-color: var(--tertiary-color);
+    background-color: #00000050;
 }
 
 #button-start:active, #button-stop:active {
-    background-color: var(--quaternary-color);
+    background-color: #00000090;
 }
 
-#score-container, #score-value {
+#score-container {
+    margin-top: 20px;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 2em;
     font-weight: bold;
     color: var(--secondary-color);
+    background-color: #000000b0;
+    margin: 20px auto auto auto;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #main-page {
@@ -94,7 +158,6 @@ h1, h3, p, input {
 
 #year {
     color: var(--secondary-color);
-    font-family: "Open Sans", sans-serif;
 }
 
 #main-page, #year {

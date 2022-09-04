@@ -70,7 +70,6 @@ function addWord() {
         newLetter.id = i;
         newLetter.className = "letter";
         newLetter.innerHTML = randomWord[i];
-        newLetter.setAttribute("style", "font-family: 'Open Sans', sans-serif; font-size: 1.5em; font-weight: bold; color: var(--secondary-color);");
         randomWordBox.appendChild(newLetter);
     }
 

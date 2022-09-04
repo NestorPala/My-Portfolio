@@ -17,24 +17,29 @@
             <h1 id="title-typing-practice">&nbsp;</h1>  
             <p id="aesthetic-writer-cursor"></p>
         </div>
-        <h3 id="description">Improve typing speed by typing one random letter at once.</h3>
+        <h3 id="description">Improve typing speed by typing words.</h3>
 
-        <div id="time-between-letters">
-            <p>Time between letters (in seconds):</p>
-            <input type="number" id="time-gap" value="2" min="0.5" max="5" step="0.1">
-        </div>
         <button id="button-start" onclick="start()">Start Typing!</button>
 
-        <div hidden id="random-letter"></div>
-        <div id="mobileInput"></div>
+        <div id="random-word-wrapper">
+            <div hidden id="random-word-box"></div>
+        </div>
+        
+        <div id="mobile-input"></div>
+
         <button hidden id="button-stop" onclick="stop()">Stop Typing!</button>
-        <div hidden id="score-text">
-            Accuracy: <span id="score">0</span>%
+        
+        <div hidden id="score-container">
+            <div id="wpm">
+                Speed: <span id="wpm-value">0.00</span> WPM
+            </div>
+            <div id="accuracy">
+                Accuracy: <span id="accuracy-value">0</span>%
+            </div>
         </div>
 
         <!-- Replace with royalty free image -->
         <img id="keyboard-img" src="https://www.typing.academy/app/source/public/images/intro/en/keyboard-colors-new3.png" alt="typing-visual-guide">
-
     </div>
     <footer>
         <div class="center">
@@ -43,7 +48,7 @@
         </div>
     </footer>
 </body>
-<script src="scripts/random-letter.js"></script>
+<script src="scripts/random-word.js"></script>
 <script src="./scripts/title.js"></script>
 <script src="../../scripts/year.js"></script>
 </html>

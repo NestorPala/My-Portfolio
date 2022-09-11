@@ -42,12 +42,21 @@ footer a:hover {
     text-align: center;
 }
 
+#title-my-portfolio {
+    margin-bottom: 10%;
+}
+
 h1 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 10%;
     display: inline-block;
     margin-left: auto;
+}
+
+#title-my-portfolio h5 {
+    margin-top: 0;
+    font-size: medium;
+    font-weight: 400;
 }
 
 #aesthetic-writer-cursor {

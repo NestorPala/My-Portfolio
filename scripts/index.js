@@ -5,3 +5,18 @@ window.onload = function() {
         a[i].setAttribute('target', '_blank');
     }
 };
+
+
+// Moving background
+const speed = 0.07;
+const ms = 16;
+let x = 1;
+
+const moveBackground = function () { 
+    document.querySelectorAll("body").forEach(function(element) {
+        element.style.backgroundPosition = (x*speed)%10000 + "% 200px";
+    });
+    x++;
+}
+
+setInterval(moveBackground, ms);

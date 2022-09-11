@@ -43,7 +43,7 @@ footer a:hover {
 }
 
 #title-my-portfolio {
-    margin-bottom: 10%;
+    margin-bottom: 5git%;
 }
 
 h1 {
@@ -55,6 +55,7 @@ h1 {
 
 #title-my-portfolio h5 {
     margin-top: 0;
+    margin-bottom: 0;
     font-size: medium;
     font-weight: 400;
 }

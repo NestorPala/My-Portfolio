@@ -16,6 +16,10 @@ body {
     }
 }
 
+* {
+    color: white;
+}
+
 footer {
     text-align: center;
     margin-bottom: 30px;
@@ -24,7 +28,6 @@ footer {
 footer a {
     margin-top: 10px;
     font-weight: bold;
-    color: antiquewhite;
     text-decoration: none;
     padding: 7px;
     border: solid 3px transparent;
@@ -35,16 +38,11 @@ footer a:hover {
     background-color: #1e062b;
 }
 
-footer p {
-    color: antiquewhite;
-}
-
 #title-container {
     text-align: center;
 }
 
 h1 {
-    color: white;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 10%;
@@ -53,7 +51,6 @@ h1 {
 }
 
 #aesthetic-writer-cursor {
-    color: white;
     font-size: 3rem;
     display: inline;
     margin-block-start: 0em;
@@ -64,13 +61,18 @@ h1 {
 
 hr {
     width: 40%;
-    margin: 70px auto;
+    margin: 30px auto;
+    border-color: transparent;
 }
 
+#contact-me-button {
+    border: 3px white solid;
+    margin-top: 20px;
+    display: inline-block;
+}
 
 .project-link {
     text-decoration: none;
-    color: antiquewhite;
     display: inline-block;
     padding: 50px;
     font-size: 2rem;
@@ -90,12 +92,7 @@ hr {
     text-align: center;
 }
 
-#year {
-    color: antiquewhite;
-}
-
-#not-ready-yet-message {
-    color: antiquewhite;
+.project-link-notes {
     margin-top: 10px;
     font-size: 0.5em;
     font-style: italic;

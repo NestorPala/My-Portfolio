@@ -1,6 +1,6 @@
 body {
-    background-color: #390c50;
-    font-family: "Montserrat", sans-serif;
+    background-color: #390c50 !important;
+    font-family: "Montserrat", sans-serif !important;
     background-image: url('../images/pala.png');
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 * {
-    color: white;
+    color: white !important;
 }
 
 footer {
@@ -34,7 +34,7 @@ footer a {
 }
 
 footer a:hover {
-    border: solid 3px antiquewhite;
+    border: solid 3px white;
     background-color: #1e062b;
 }
 
@@ -43,6 +43,7 @@ footer a:hover {
 }
 
 #title-my-portfolio {
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -72,7 +73,7 @@ h1 {
 hr {
     width: 40%;
     margin: 30px auto;
-    border-color: transparent;
+    border-color: transparent !important;
 }
 
 #contact-me-button {
@@ -94,7 +95,7 @@ hr {
 }
 
 .project-link:hover {
-    border: solid 3px antiquewhite;
+    border: solid 3px white;
     background-color: #1e062b;
 }
 

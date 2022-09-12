@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>PORTFOLIO</title>
 </head>
 <body>
@@ -20,16 +22,39 @@
 
     </div>
     <div class="project-links">
-        <a id="personal-page" class="project-link" href="projects/Personal_Page/index.html">Personal Page</a>
-        <a class="project-link" href="projects/To-Do_List/index.html">To-Do List</a>   
-        <a class="project-link" href="projects/Typing_Practice/index.html">Typing Practice</a>
-        <div class="not-ready-yet">
-            <a class="project-link" href="https://e-commerce-app-67342gd763.herokuapp.com/">
-                E-Commerce App
-                <div class="project-link-notes">(Backend)</div>
-            </a>
-        </div>
-        
+        <a 
+        id="personal-page" 
+        class="project-link" 
+        href="projects/Personal_Page/index.html" 
+        data-bs-toggle="modal" 
+        data-bs-target="#personal-pageModal">
+        Personal Page
+        </a>
+        <a
+        id="todolist" 
+        class="project-link" 
+        href="projects/To-Do_List/index.html"
+        data-bs-toggle="modal" 
+        data-bs-target="#todolistModal">
+        To-Do List
+        </a>   
+        <a 
+        id="typing-practice"
+        class="project-link" 
+        href="projects/Typing_Practice/index.html" 
+        data-bs-toggle="modal" 
+        data-bs-target="#typing-practiceModal">
+        Typing Practice
+        </a>
+        <a
+        id="e-commerce-app" 
+        class="project-link" 
+        href="https://e-commerce-app-67342gd763.herokuapp.com/" 
+        data-bs-toggle="modal" 
+        data-bs-target="#e-commerce-appModal">
+            E-Commerce App
+            <div class="project-link-notes">(Backend)</div>
+        </a>
     </div>
     <hr>
     <footer>
@@ -40,5 +65,6 @@
 
     <script src="./scripts/year.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

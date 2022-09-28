@@ -2,24 +2,31 @@
     #keyboard-img {
         width: 75vw;
     }
+
     body {
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/typewriter-vertical.jpg");
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter-vertical.jpg");
         background-size: cover;
     }
+
     h1 {
         font-size: 2.2em;
     }
+
     footer {
         font-size: 0.5em;
         margin-top: 25vh;
     }
+
     #score-container {
         width: 65%;
         font-size: 1.25em;
     }
-    #button-start, #button-stop {
+
+    #button-start,
+    #button-stop {
         font-size: 1.25em;
     }
+
     #description {
         font-size: 0.75em;
     }
@@ -29,24 +36,31 @@
     #keyboard-img {
         width: 35vw;
     }
+
     body {
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/typewriter.jpg");
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter.jpg");
         background-size: cover;
     }
+
     h1 {
         font-size: 4em;
-    }    
+    }
+
     footer {
         position: absolute;
         font-size: 0.75em;
     }
+
     #score-container {
         width: 30%;
         font-size: 2em;
     }
-    #button-start, #button-stop {
+
+    #button-start,
+    #button-stop {
         font-size: 1.5em;
     }
+
     #description {
         font-size: 1em;
     }
@@ -62,12 +76,13 @@
 
 * {
     font-family: 'Fira Code', monospace;
-    
+
 }
 
-#buttonStart, #buttonStop {
+#buttonStart,
+#buttonStop {
     background-color: rgba(255, 255, 255, 0);
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 }
 
 #description {
@@ -76,10 +91,10 @@
 
 footer {
     text-align: center;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
     bottom: 0;
 }
@@ -88,11 +103,15 @@ footer p {
     line-height: 1.25em;
 }
 
-h3, p {
+h3,
+p {
     cursor: default;
 }
 
-h1, h3, p, input {
+h1,
+h3,
+p,
+input {
     color: var(--secondary-color);
 }
 
@@ -109,12 +128,13 @@ h1, h3, p, input {
 }
 
 .letter {
-    font-size: 1.5em; 
-    font-weight: bold; 
+    font-size: 1.5em;
+    font-weight: bold;
     color: var(--secondary-color);
 }
 
-#button-start, #button-stop {
+#button-start,
+#button-stop {
     cursor: pointer;
     border-style: solid;
     border-radius: 10px;
@@ -125,11 +145,13 @@ h1, h3, p, input {
     margin: 10px;
 }
 
-#button-start:hover, #button-stop:hover {
+#button-start:hover,
+#button-stop:hover {
     background-color: #00000050;
 }
 
-#button-start:active, #button-stop:active {
+#button-start:active,
+#button-stop:active {
     background-color: #00000090;
 }
 
@@ -152,7 +174,7 @@ h1, h3, p, input {
 }
 
 .center {
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -160,7 +182,8 @@ h1, h3, p, input {
     color: var(--secondary-color);
 }
 
-#main-page, #year {
+#main-page,
+#year {
     font-size: 1.25em;
 }
 

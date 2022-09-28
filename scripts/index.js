@@ -1,6 +1,6 @@
-window.onload = function() {
+window.onload = function () {
     let a = document.querySelectorAll('.project-link');
-    for (let i=0; i<a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         if (a[i].id == "personal-page") continue;
         a[i].setAttribute('target', '_blank');
     }
@@ -13,9 +13,9 @@ const speed = 0.07;
 const ms = 16;
 let x = 1;
 
-const moveBackground = function () { 
-    document.querySelectorAll("body").forEach(function(element) {
-        element.style.backgroundPosition = (x*speed)%10000 + "% 200px";
+const moveBackground = function () {
+    document.querySelectorAll("body").forEach(function (element) {
+        element.style.backgroundPosition = (x * speed) % 10000 + "% 200px";
     });
     x++;
 }
@@ -28,10 +28,10 @@ setInterval(moveBackground, ms);
 let projectLinks = document.getElementsByClassName("project-link");
 
 let repoLinks = {
-    "personal-page" : "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
-    "todolist" : "https://github.com/NestorPala/To-Do-List",
-    "typing-practice" : "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice",
-    "e-commerce-app" : "https://github.com/NestorPala/E-Commerce-App-Backend"
+    "personal-page": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
+    "todolist": "https://github.com/NestorPala/To-Do-List",
+    "typing-practice": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice",
+    "e-commerce-app": "https://github.com/NestorPala/E-Commerce-App-Backend"
 };
 
 Array.prototype.forEach.call(projectLinks, element => {

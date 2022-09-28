@@ -1,10 +1,11 @@
-.modal-header, .modal-body, .modal-footer {
+.modal-header,
+.modal-body,
+.modal-footer {
     background-color: #390c50 !important;
 }
 
 #open-project-button,
-#visit-repo-button
-{
+#visit-repo-button {
     font-weight: bold;
 }
 
@@ -22,8 +23,8 @@
     color: #390c50 !important;
 }
 
-.modal-header :hover, 
-.modal-body :hover, 
+.modal-header :hover,
+.modal-body :hover,
 .modal-footer :hover {
     background-color: white !important;
 }

@@ -2,19 +2,24 @@
   #my-name {
     font-size: 2em;
   }
+
   #pala-photo {
     width: 150px;
     height: 150px;
   }
+
   #my-description {
     font-size: 0.8em;
     font-weight: 300;
   }
+
   body {
     background-repeat: repeat;
     background-size: auto;
   }
-  h1, h3 {
+
+  h1,
+  h3 {
     font-size: 2.5em;
   }
 }
@@ -23,37 +28,42 @@
   #my-name {
     font-size: 3em;
   }
+
   #pala-photo {
     width: 200px;
     height: 200px;
   }
+
   #my-description {
     font-size: 1em;
     font-weight: normal;
   }
+
   body {
     background-repeat: no-repeat;
   }
-  h1, h3 {
+
+  h1,
+  h3 {
     font-size: 3em;
   }
 }
 
-a, 
-body, 
-#contact-me, 
+a,
+body,
+#contact-me,
 #go-to-top {
   color: white
 }
 
-#contact-me, 
+#contact-me,
 nav a {
   border-color: white;
 }
 
 #contact-me:hover {
   border-color: #ee20ee;
-  color: rgb(243,152,64);
+  color: rgb(243, 152, 64);
 }
 
 #contact-me:active {
@@ -69,18 +79,19 @@ nav a {
   filter: invert(72%) sepia(52%) saturate(1403%) hue-rotate(329deg) brightness(98%) contrast(94%);
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
   color: #ee20ee;
 }
 
 #go-back {
-  color: rgb(243,152,64);
+  color: rgb(243, 152, 64);
 }
 
-h4, nav a {
-  color: rgb(243,152,64);
+h4,
+nav a {
+  color: rgb(243, 152, 64);
 }
 
 a {
@@ -89,8 +100,8 @@ a {
 }
 
 a:hover {
-  color: rgb(243,152,64);
-  text-decoration-color: rgb(243,152,64);
+  color: rgb(243, 152, 64);
+  text-decoration-color: rgb(243, 152, 64);
 }
 
 html {
@@ -154,7 +165,7 @@ nav a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   font-size: 0.75em;
   font-weight: bold;
   position: fixed;
@@ -172,7 +183,7 @@ nav a {
 .container {
   padding: 30px;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   margin-top: 25px;
   margin-bottom: 25px;
   backdrop-filter: blur(6px);
@@ -188,7 +199,8 @@ nav a {
   margin: auto;
 }
 
-#main-page, #year {
+#main-page,
+#year {
   font-weight: 200;
   text-decoration: none;
 }
@@ -220,7 +232,8 @@ nav a {
   opacity: 70%;
 }
 
-#skills li:hover, #hobbies li:hover {
+#skills li:hover,
+#hobbies li:hover {
   transform: scale(1.25);
   cursor: default;
 }

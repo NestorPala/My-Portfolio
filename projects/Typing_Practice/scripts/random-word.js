@@ -1,4 +1,4 @@
-const words = ["factory","reject","damage","decrease","wealth","sketch","will","output","orchestra","circumstance","seat","available", "horse","structure","kit","institution","pepper","neglect","so","worker","passage","possibility","exploit","wander","basketball","increase","at","grip","category","self","hand","painter","city","nationalist","clique","organisation","examination","mastermind","instinct","era","extract","bathroom","perceive","constitutional","squeeze","wagon","housewife","cave","silk","assume",];
+const words = ["factory", "reject", "damage", "decrease", "wealth", "sketch", "will", "output", "orchestra", "circumstance", "seat", "available", "horse", "structure", "kit", "institution", "pepper", "neglect", "so", "worker", "passage", "possibility", "exploit", "wander", "basketball", "increase", "at", "grip", "category", "self", "hand", "painter", "city", "nationalist", "clique", "organisation", "examination", "mastermind", "instinct", "era", "extract", "bathroom", "perceive", "constitutional", "squeeze", "wagon", "housewife", "cave", "silk", "assume",];
 
 const DEFAULT_LETTER_COLOR = "white";
 const CORRECT_LETTER = "green";
@@ -65,7 +65,7 @@ function removeWord() {
 function addWord() {
     let randomWord = getRandomWord();
 
-    for (let i=0; i<randomWord.length; i++) {
+    for (let i = 0; i < randomWord.length; i++) {
         let newLetter = document.createElement("span");
         newLetter.id = i;
         newLetter.className = "letter";
@@ -122,7 +122,7 @@ function registerKey(event) {
 function stop() {
     removeWord();
 
-    if(isMobileDevice()) {
+    if (isMobileDevice()) {
         closeMobileKeyboard();
         window.removeEventListener('input', registerKey);
     } else {
@@ -150,7 +150,7 @@ function stop() {
     startTime = 0;
     currentTime = 0;
 
-    scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 };
 
 
@@ -173,8 +173,8 @@ function start() {
     addWord();
 
     startTime = Date.now();
-    
-    if(isMobileDevice()) {
+
+    if (isMobileDevice()) {
         openMobileKeyboard();
         window.addEventListener('input', registerKey);
     } else {

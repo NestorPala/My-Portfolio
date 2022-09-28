@@ -6,13 +6,13 @@ body {
 
 @media (max-width: 600px) {
     body {
-       background-size: 100px 100px; 
+        background-size: 100px 100px;
     }
 }
 
 @media (min-width: 600px) {
     body {
-       background-size: 200px 200px; 
+        background-size: 200px 200px;
     }
 }
 

@@ -64,8 +64,8 @@ hr {
     background-color: #1e062b28;
     border: #1e062b28 solid;
     border-radius: 10px;
-    text-shadow: 2px 2px 2px #1e062b;
-    margin: 5px;
+    margin: 2vh;
+    overflow: hidden;
 }
 
 .project-link a {
@@ -73,7 +73,6 @@ hr {
 }
 
 .project-link:hover {
-    border: solid 3px white;
     background-color: #1e062b;
 }
 

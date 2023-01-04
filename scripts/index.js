@@ -25,7 +25,7 @@ setInterval(moveBackground, ms);
 
 
 // Setting multiple modals
-let projectLinks = document.getElementsByClassName("project-link");
+let projectLinks = document.getElementsByClassName("pl");
 
 let repoLinks = {
     "personal-page": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",

@@ -57,10 +57,19 @@ hr {
     text-align: center;
 }
 
+.project-link:has(#personal-page) {
+    background-color: #83551579;
+    font-style: oblique;
+}
+
+.project-link:has(#personal-page):hover {
+    background-color: #8f530e;
+}
+
 .project-link {
     display: inline-block;
     padding: 50px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #1e062b28;
     border: #1e062b28 solid;
     border-radius: 10px;
@@ -74,6 +83,7 @@ hr {
 
 .project-link:hover {
     background-color: #1e062b;
+    cursor: pointer;
 }
 
 .project-link-notes {
@@ -101,7 +111,16 @@ footer {
 }
 /* --------------------------- */
 
-footer a {
+#contact-me-button:hover {
+    background-color: #8f530e;
+}
+
+#contact-me-button {
+    border: 3px #1e062b28 solid !important;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #83551579;
     margin-top: 10px;
     font-weight: bold;
     text-decoration: none;
@@ -109,13 +128,8 @@ footer a {
     border: solid 3px transparent;
 }
 
-footer a:hover {
-    border: solid 3px white;
-    background-color: #1e062b;
-}
-
-#contact-me-button {
-    border: 3px white solid;
-    margin-top: 20px;
-    display: inline-block;
+#year {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
 }

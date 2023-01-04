@@ -20,6 +20,52 @@ body {
     color: white !important;
 }
 
+
+#main-title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+hr {
+    width: 40%;
+    margin: 30px auto;
+    border-color: transparent !important;
+}
+
+.project-links {
+    text-align: center;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 50px;
+    font-size: 2rem;
+    background-color: #1e062b28;
+    border: #1e062b28 solid;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px #1e062b;
+    margin: 5px;
+}
+
+.project-link a {
+    text-decoration: none;
+}
+
+.project-link:hover {
+    border: solid 3px white;
+    background-color: #1e062b;
+}
+
+.project-link-notes {
+    margin-top: 10px;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
 footer {
     text-align: center;
     margin-bottom: 30px;
@@ -38,73 +84,8 @@ footer a:hover {
     background-color: #1e062b;
 }
 
-#title-container {
-    text-align: center;
-}
-
-#title-my-portfolio {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    display: inline-block;
-    margin-left: auto;
-}
-
-#title-my-portfolio h5 {
-    margin-top: -10px;
-    margin-bottom: 0;
-    font-size: medium;
-    font-weight: 400;
-}
-
-#aesthetic-writer-cursor {
-    font-size: 3rem;
-    display: inline;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-hr {
-    width: 40%;
-    margin: 30px auto;
-    border-color: transparent !important;
-}
-
 #contact-me-button {
     border: 3px white solid;
     margin-top: 20px;
     display: inline-block;
-}
-
-.project-link {
-    text-decoration: none;
-    display: inline-block;
-    padding: 50px;
-    font-size: 2rem;
-    background-color: #1e062b28;
-    border: #1e062b28 solid;
-    border-radius: 10px;
-    text-shadow: 2px 2px 2px #1e062b;
-    margin: 5px;
-}
-
-.project-link:hover {
-    border: solid 3px white;
-    background-color: #1e062b;
-}
-
-.project-links {
-    text-align: center;
-}
-
-.project-link-notes {
-    margin-top: 10px;
-    font-size: 0.5em;
-    font-style: italic;
 }

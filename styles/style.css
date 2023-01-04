@@ -20,7 +20,6 @@ body {
     color: white !important;
 }
 
-
 #main-title {
     display: block;
     text-align: center;
@@ -66,10 +65,24 @@ hr {
     font-style: italic;
 }
 
-footer {
-    text-align: center;
-    margin-bottom: 30px;
+/* Footer always at the bottom */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+main {
+    flex-grow: 1;
+}
+footer {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 5vh auto;
+}
+/* --------------------------- */
 
 footer a {
     margin-top: 10px;

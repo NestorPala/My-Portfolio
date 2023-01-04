@@ -8,11 +8,29 @@ body {
     body {
         background-size: 100px 100px;
     }
+    .project-link {
+        width: 70vw;
+        height: 40vh;
+    }
 }
 
 @media (min-width: 600px) {
     body {
         background-size: 200px 200px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .project-link {
+        width: 80vw;
+        height: 25vh;
+    }
+}
+
+@media (min-width: 900px) {
+    .project-link {
+        width: 40vw;
+        height: 25vh;
     }
 }
 

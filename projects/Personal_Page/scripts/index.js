@@ -36,24 +36,18 @@ goToTopButton.addEventListener("click", () => {
     https://stackoverflow.com/questions/29240028/css-make-a-background-image-scroll-slower-than-everything-else
 */
 
-(function () {
-    let parallax = document.querySelectorAll("body");
-    let speed = 0.5;
+(() => {
+    const bodyElements = document.querySelectorAll("body");
+    const backgroundSpeed = 0.2; //from 0.0 to 1.0
 
-    window.onscroll = function () {
-        [].slice.call(parallax).forEach(function (element) {
-            let windowYOffset = window.pageYOffset;
-            let elBackgroundPos = "50% " + (windowYOffset * speed) + "px";
+    window.onscroll = () => {
+        Array.prototype.forEach.call(bodyElements, function(element) {
+            const windowYOffset = window.pageYOffset;
+            const backgroundPosition = "50% " + (windowYOffset * (1 - backgroundSpeed)) + "px";
 
-            element.style.backgroundPosition = elBackgroundPos;
+            element.style.backgroundPosition = backgroundPosition;
 
-            /////
-
-            if (window.scrollY !== 0) {
-                goToTopButton.hidden = false;
-            } else {
-                goToTopButton.hidden = true;
-            }
+            goToTopButton.hidden = window.scrollY === 0;
         });
     };
 })();

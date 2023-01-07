@@ -61,29 +61,28 @@ hr {
 }
 
 #personal-page {
-    background-color: #83551579;
+    background-color: rgba(131, 85, 21, 0.47);
     font-style: oblique;
 }
 
 #personal-page:hover {
-    background-color: #8f530e;
+    background-color: rgba(143, 83, 14, 1);
 }
 
 .project-link {
     display: inline-block;
     padding: 50px;
     font-size: 1.5rem;
-    background-color: #1e062b28;
-    border: #1e062b28 solid;
+    background-color: rgba(30, 6, 43, 0.16);
+    border: rgba(30, 6, 43, 0.16) solid;
     border-radius: 10px;
     margin: 2vh;
     overflow: hidden;
     text-decoration: none;
-    /* padding-top: 15vh; */
 }
 
 .project-link:hover {
-    background-color: #1e062b;
+    background-color: rgba(30, 6, 43, 1);
     cursor: pointer;
 }
 
@@ -113,15 +112,15 @@ footer {
 /* --------------------------- */
 
 #contact-me-button:hover {
-    background-color: #8f530e;
+    background-color: rgba(143, 83, 14, 1);
 }
 
 #contact-me-button {
-    border: 3px #1e062b28 solid !important;
+    border: 3px rgba(30, 6, 43, 0.16) solid !important;
     border-radius: 10px;
     margin-top: 20px;
     display: inline-block;
-    background-color: #83551579;
+    background-color: rgba(131, 85, 21, 0.47);
     margin-top: 10px;
     font-weight: bold;
     text-decoration: none;

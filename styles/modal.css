@@ -13,8 +13,8 @@
     border-color: white;
 }
 
-#open-project-button a,
-#visit-repo-button a {
+#open-project-button,
+#visit-repo-button {
     text-decoration: none;
 }
 

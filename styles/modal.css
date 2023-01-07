@@ -36,3 +36,13 @@
 .modal-body {
     text-align: center;
 }
+
+/* Modal speed */
+.modal.fade .modal-dialog
+{
+    -webkit-transition: -webkit-transform 0.15s !important;
+    -moz-transition:    -moz-transform    0.15s !important;
+    -ms-transition:     -ms-transform     0.15s !important;
+    -o-transition:      -o-transform      0.15s !important;
+    transition:         transform         0.15s !important;
+}

@@ -1,5 +1,3 @@
-const words = ["factory", "reject", "damage", "decrease", "wealth", "sketch", "will", "output", "orchestra", "circumstance", "seat", "available", "horse", "structure", "kit", "institution", "pepper", "neglect", "so", "worker", "passage", "possibility", "exploit", "wander", "basketball", "increase", "at", "grip", "category", "self", "hand", "painter", "city", "nationalist", "clique", "organisation", "examination", "mastermind", "instinct", "era", "extract", "bathroom", "perceive", "constitutional", "squeeze", "wagon", "housewife", "cave", "silk", "assume",];
-
 const DEFAULT_LETTER_COLOR = "white";
 const CORRECT_LETTER = "green";
 const WRONG_LETTER = "red";
@@ -48,8 +46,8 @@ function calculateWPM() {
 
 
 function getRandomWord() {
-    const randomIndex = Math.floor(Math.random() * (words.length - 1));
-    return words[randomIndex];
+    const randomIndex = Math.floor(Math.random() * (wordsList.length - 1));
+    return wordsList[randomIndex];
 }
 
 

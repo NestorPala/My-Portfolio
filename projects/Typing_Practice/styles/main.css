@@ -10,6 +10,11 @@
 
 }
 
+body {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter.jpg");
+    background-size: cover;
+}
+
 #buttonStart,
 #buttonStop {
     background-color: rgba(255, 255, 255, 0);
@@ -137,14 +142,28 @@ h1 {
     margin-left: auto;
 }
 
+/* Footer always at the bottom */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+}
+footer {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 5vh auto;
+}
+/* --------------------------- */
+
 @media (max-width: 760px) {
     #keyboard-img {
         width: 75vw;
-    }
-
-    body {
-        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter-vertical.jpg");
-        background-size: cover;
     }
 
     h1 {
@@ -174,11 +193,6 @@ h1 {
 @media (min-width: 760px) {
     #keyboard-img {
         width: 35vw;
-    }
-
-    body {
-        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter.jpg");
-        background-size: cover;
     }
 
     h1 {

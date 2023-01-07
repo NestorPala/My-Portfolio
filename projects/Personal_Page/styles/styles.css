@@ -49,33 +49,71 @@
   }
 }
 
+.section-button {
+  border-color: white;
+  color: rgb(243, 152, 64);
+  background-color: rgba(52, 27, 4, 0.455);
+  text-decoration: none;
+  padding: 5px;
+  border: solid 2px;
+  margin: 10px 10px 0;
+  display: inline-block;
+}
+
+#go-back {
+  color: white;
+  border: none;
+  font-style: italic;
+  text-decoration: dashed underline;
+  display: block;
+  padding: 5vh;
+}
+
 a,
 body,
 #contact-me,
 #go-to-top {
-  color: white
+  color: white;
 }
 
-#contact-me,
-nav a {
+#contact-me {
   border-color: white;
+  text-decoration: none;
+  padding: 5px;
+  border: solid 2px;
+  display: inline;
 }
 
 #contact-me:hover {
   border-color: #ee20ee;
   color: rgb(243, 152, 64);
+  background-color: rgba(52, 27, 4, 0.455);
 }
 
 #contact-me:active {
   border-color: #d41ad4;
   color: rgb(215, 131, 51);
+  background-color: rgba(46, 23, 2, 0.627);
 }
 
 #go-to-top {
   border-color: #ee20ee;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  font-size: 0.75em;
+  font-weight: bold;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  cursor: pointer;
+  border-style: solid;
 }
 
 #go-to-top img {
+  width: 30px;
+  height: 30px;
   filter: invert(72%) sepia(52%) saturate(1403%) hue-rotate(329deg) brightness(98%) contrast(94%);
 }
 
@@ -85,13 +123,19 @@ h3 {
   color: #ee20ee;
 }
 
-#go-back {
-  color: rgb(243, 152, 64);
+h3 {
+  margin-top: 10px;
 }
 
-h4,
-nav a {
+h4 {
   color: rgb(243, 152, 64);
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: normal;
+  font-size: medium;
 }
 
 a {
@@ -122,26 +166,6 @@ footer {
   margin-bottom: 10px;
 }
 
-nav a {
-  text-decoration: none;
-  padding: 5px;
-  border: solid 2px;
-}
-
-h3 {
-  margin-top: 10px;
-}
-
-h4 {
-  font-size: 1.75em;
-  font-weight: 500;
-}
-
-h5 {
-  font-weight: normal;
-  font-size: medium;
-}
-
 hr {
   border-style: none;
 }
@@ -154,30 +178,6 @@ img {
 nav {
   text-align: center;
   margin-top: 30px;
-}
-
-nav a {
-  margin: 10px 10px 0;
-  display: inline-block;
-}
-
-#go-to-top {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  font-size: 0.75em;
-  font-weight: bold;
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  cursor: pointer;
-  border-style: solid;
-}
-
-#go-to-top img {
-  width: 30px;
-  height: 30px;
 }
 
 .container {
@@ -210,26 +210,11 @@ nav a {
   margin: 20px;
 }
 
-#contact-me {
-  text-decoration: none;
-  padding: 5px;
-  border: solid 2px;
-  display: inline;
-}
-
 #intro {
   width: fit-content;
   height: fit-content;
   text-align: center;
   margin: 0px auto 0px auto;
-}
-
-#go-back {
-  border: none;
-  font-style: italic;
-  padding-top: 30px;
-  text-decoration: dashed underline;
-  opacity: 70%;
 }
 
 #skills li:hover,

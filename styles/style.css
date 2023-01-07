@@ -4,39 +4,6 @@ body {
     background-image: url('../images/pala.png');
 }
 
-@media (max-width: 600px) {
-    body {
-        background-size: 100px 100px;
-    }
-    .project-link {
-        width: 70vw;
-        height: 40vh;
-        padding-top: 15vh !important;
-    }
-}
-
-@media (min-width: 600px) {
-    body {
-        background-size: 200px 200px;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .project-link {
-        width: 80vw;
-        height: 25vh;
-        padding-top: 10vh !important;
-    }
-}
-
-@media (min-width: 900px) {
-    .project-link {
-        width: 40vw;
-        height: 25vh;
-        padding-top: 10vh !important;
-    }
-}
-
 * {
     color: white !important;
 }
@@ -132,4 +99,37 @@ footer {
     font-style: italic;
     font-weight: lighter;
     font-size: small;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-size: 100px 100px;
+    }
+    .project-link {
+        width: 70vw;
+        height: 40vh;
+        padding-top: 15vh !important;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-size: 200px 200px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .project-link {
+        width: 80vw;
+        height: 25vh;
+        padding-top: 10vh !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .project-link {
+        width: 40vw;
+        height: 25vh;
+        padding-top: 10vh !important;
+    }
 }

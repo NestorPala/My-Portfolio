@@ -1,72 +1,3 @@
-@media (max-width: 760px) {
-    #keyboard-img {
-        width: 75vw;
-    }
-
-    body {
-        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter-vertical.jpg");
-        background-size: cover;
-    }
-
-    h1 {
-        font-size: 2.2em;
-    }
-
-    footer {
-        font-size: 0.5em;
-        margin-top: 25vh;
-    }
-
-    #score-container {
-        width: 65%;
-        font-size: 1.25em;
-    }
-
-    #button-start,
-    #button-stop {
-        font-size: 1.25em;
-    }
-
-    #description {
-        font-size: 0.75em;
-    }
-}
-
-@media (min-width: 760px) {
-    #keyboard-img {
-        width: 35vw;
-    }
-
-    body {
-        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter.jpg");
-        background-size: cover;
-    }
-
-    h1 {
-        font-size: 4em;
-    }
-
-    footer {
-        position: absolute;
-        font-size: 0.75em;
-    }
-
-    #score-container {
-        width: 30%;
-        font-size: 2em;
-    }
-
-    #button-start,
-    #button-stop {
-        font-size: 1.5em;
-    }
-
-    #description {
-        font-size: 1em;
-    }
-}
-
-
 :root {
     --main-bg-color: #1e6853;
     --secondary-color: white;
@@ -204,4 +135,72 @@ input {
 h1 {
     display: inline-block;
     margin-left: auto;
+}
+
+@media (max-width: 760px) {
+    #keyboard-img {
+        width: 75vw;
+    }
+
+    body {
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter-vertical.jpg");
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    footer {
+        font-size: 0.5em;
+        margin-top: 25vh;
+    }
+
+    #score-container {
+        width: 65%;
+        font-size: 1.25em;
+    }
+
+    #button-start,
+    #button-stop {
+        font-size: 1.25em;
+    }
+
+    #description {
+        font-size: 0.75em;
+    }
+}
+
+@media (min-width: 760px) {
+    #keyboard-img {
+        width: 35vw;
+    }
+
+    body {
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/typewriter.jpg");
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    footer {
+        position: absolute;
+        font-size: 0.75em;
+    }
+
+    #score-container {
+        width: 30%;
+        font-size: 2em;
+    }
+
+    #button-start,
+    #button-stop {
+        font-size: 1.5em;
+    }
+
+    #description {
+        font-size: 1em;
+    }
 }

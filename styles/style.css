@@ -57,12 +57,12 @@ hr {
     text-align: center;
 }
 
-.project-link:has(#personal-page) {
+#personal-page {
     background-color: #83551579;
     font-style: oblique;
 }
 
-.project-link:has(#personal-page):hover {
+#personal-page:hover {
     background-color: #8f530e;
 }
 
@@ -75,9 +75,6 @@ hr {
     border-radius: 10px;
     margin: 2vh;
     overflow: hidden;
-}
-
-.project-link a {
     text-decoration: none;
 }
 

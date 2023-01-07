@@ -1,4 +1,4 @@
-const projectLinks = document.getElementsByClassName("pl");
+const projectLinks = document.getElementsByClassName("project-link");
 
 const repoLinks = {
     "personal-page": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",

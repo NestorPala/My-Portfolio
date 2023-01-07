@@ -4,12 +4,12 @@ const DEFAULT_LETTER_COLOR = "white";
 const CORRECT_LETTER = "green";
 const WRONG_LETTER = "red";
 
-let description = document.getElementById('description');
-let startButton = document.getElementById('button-start');
-let stopButton = document.getElementById('button-stop');
+const description = document.getElementById('description');
+const startButton = document.getElementById('button-start');
+const stopButton = document.getElementById('button-stop');
 let input;
-let mobileInput = document.getElementById('mobile-input');
-let randomWordWrapper = document.getElementById('random-word-wrapper');
+const mobileInput = document.getElementById('mobile-input');
+const randomWordWrapper = document.getElementById('random-word-wrapper');
 let randomWordBox = document.getElementById('random-word-box');
 let currentLetter = 0;
 let hits = 0;
@@ -17,9 +17,9 @@ let misses = 0;
 let typedCharacters = 0;
 let startTime = 0;
 let currentTime = 0;
-let scoreContainer = document.getElementById('score-container');
-let wpmValue = document.getElementById("wpm-value");
-let accuracyValue = document.getElementById('accuracy-value');
+const scoreContainer = document.getElementById('score-container');
+const wpmValue = document.getElementById("wpm-value");
+const accuracyValue = document.getElementById('accuracy-value');
 
 
 
@@ -42,13 +42,13 @@ const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
 
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
 function calculateWPM() {
-    let minutesElapsed = ((currentTime - startTime) / 1000) / 60;
+    const minutesElapsed = ((currentTime - startTime) / 1000) / 60;
     return (((typedCharacters - misses) / 5) / minutesElapsed).toFixed(2);
 }
 
 
 function getRandomWord() {
-    let randomIndex = Math.floor(Math.random() * (words.length - 1));
+    const randomIndex = Math.floor(Math.random() * (words.length - 1));
     return words[randomIndex];
 }
 
@@ -63,10 +63,10 @@ function removeWord() {
 
 
 function addWord() {
-    let randomWord = getRandomWord();
+    const randomWord = getRandomWord();
 
     for (let i = 0; i < randomWord.length; i++) {
-        let newLetter = document.createElement("span");
+        const newLetter = document.createElement("span");
         newLetter.id = i;
         newLetter.className = "letter";
         newLetter.innerHTML = randomWord[i];
@@ -87,7 +87,7 @@ function registerKey(event) {
         key = event.key;
     }
 
-    let letter = randomWordBox.childNodes[currentLetter];
+    const letter = randomWordBox.childNodes[currentLetter];
 
     if (letter.innerHTML.toLowerCase() == key.toLowerCase()) {
         letter.setAttribute("style", "color: " + CORRECT_LETTER + ";");

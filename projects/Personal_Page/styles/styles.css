@@ -58,6 +58,15 @@
   border: solid 2px;
   margin: 10px 10px 0;
   display: inline-block;
+  cursor: pointer;
+}
+
+.section-button:hover {
+  background-color: rgba(46, 23, 2, 0.627);
+}
+
+.section-button:active {
+  background-color: rgba(46, 23, 2, 0.839);
 }
 
 #go-back {
@@ -155,7 +164,7 @@ html {
 body {
   background-position: 50% 0px;
   background-color: black;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', Verdana, serif;
   background-image: url("../images/background.jpg");
   margin-left: 0;
   margin-right: 0;

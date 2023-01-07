@@ -501,10 +501,10 @@ encourage
 opera
 `;
 
-const wordsList = words.split("\n");
+const wordList = words.split("\n");
 
 // Removes the first element: '' (empty string)
-wordsList.splice(1, words.length - 1);
+wordList.splice(0, 1);
 
 // Removes the last element: (empty space)
-wordsList.pop();
+wordList.pop();

@@ -46,8 +46,8 @@ function calculateWPM() {
 
 
 function getRandomWord() {
-    const randomIndex = Math.floor(Math.random() * (wordsList.length - 1));
-    return wordsList[randomIndex];
+    const randomIndex = Math.floor(Math.random() * (wordList.length - 1));
+    return wordList[randomIndex];
 }
 
 

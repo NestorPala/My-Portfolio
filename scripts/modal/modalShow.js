@@ -4,6 +4,7 @@
 
 const modals = document.getElementsByClassName("modal");
 let open = false;
+let scrolled = 0;
 
 Array.prototype.forEach.call(modals, modal => {
     // Create an observer instance
@@ -14,12 +15,11 @@ Array.prototype.forEach.call(modals, modal => {
                 const classList = Array.from(mutation.target.classList);
                 const modalIsShowing = classList.includes("show");
                 if (modalIsShowing) {
-                    console.log("SHOW");
                     moveBackground(false);
+                    scrolled = window.scrollY;
                     open = true;
                 } else {
                     if (open === true) {
-                        console.log("HIDE");
                         moveBackground(true);
                         open = false;
                     }
@@ -37,3 +37,11 @@ Array.prototype.forEach.call(modals, modal => {
     // Start the observer
     observer.observe(target, config);
 });
+
+// Prevent scroll when the modal is open while preserving current scroll status
+// Not using "body position: fixed" because it resets scroll position to 0 (undesired behavior)
+window.onscroll = () => {
+    if (open === true) {
+        window.scrollTo({ top: scrolled, behavior: "instant" });
+    }
+};

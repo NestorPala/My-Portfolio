@@ -14,12 +14,6 @@
     background-color: #390c50 !important;
 }
 
-.modal-header :hover,
-.modal-body :hover,
-.modal-footer :hover {
-    background-color: white !important;
-}
-
 #modal-close-button {
     background-color: white !important;
 }
@@ -28,17 +22,38 @@
     text-align: center;
 }
 
-#open-project-button {
-    border-color: white;
-}
-
 #open-project-button,
 #visit-repo-button {
     font-weight: bold;
     text-decoration: none;
 }
 
-#open-project-button :hover,
-#visit-repo-button :hover {
+#open-project-button {
+    background-color: rgba(143, 83, 14, 1);
+    color: white !important;
+}
+
+a:has(#open-project-button) :hover {
+    border-color: rgb(191, 108, 14);
+    background-color: rgb(191, 108, 14);
+}
+
+a:has(#open-project-button) :active {
+    border-color: rgba(143, 83, 14, 1);
+    background-color: rgba(143, 83, 14, 1);
+}
+
+#visit-repo-button {
+    background-color: #9c85a7;
     color: #390c50 !important;
+}
+
+a:has(#visit-repo-button) :hover {
+    border-color: #bda9c6;
+    background-color: #bda9c6;
+}
+
+a:has(#visit-repo-button) :active {
+    border-color: #9c85a7;
+    background-color: #9c85a7;
 }

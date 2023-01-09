@@ -4,9 +4,9 @@ body {
     background-image: url('../images/pala.png');
 }
 
-* {
+/* * {
     color: white !important;
-}
+} */
 
 #main-title {
     display: block;
@@ -15,6 +15,7 @@ body {
     font-weight: bold;
     margin-top: 5vh;
     margin-bottom: 10vh;
+    color: white;
 }
 
 hr {
@@ -46,11 +47,13 @@ hr {
     margin: 2vh;
     overflow: hidden;
     text-decoration: none;
+    color: white;
 }
 
 .project-link:hover {
     background-color: rgba(30, 6, 43, 1);
     cursor: pointer;
+    color: white;
 }
 
 .project-link-notes {
@@ -78,6 +81,10 @@ footer {
 }
 /* --------------------------- */
 
+footer {
+    color: #bda9c6 !important;
+}
+
 #contact-me-button:hover {
     background-color: rgba(143, 83, 14, 1);
 }
@@ -93,6 +100,7 @@ footer {
     text-decoration: none;
     padding: 7px;
     border: solid 3px transparent;
+    color: white;
 }
 
 #year {

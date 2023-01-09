@@ -23,4 +23,4 @@ function moveBackground(on = true) {
     }
 }
 
-window.onload = () => moveBackground(true);
+window.onload = () => moveBackground();

@@ -1,26 +1,17 @@
+/* Modal speed */
+.modal.fade .modal-dialog
+{
+    -webkit-transition: -webkit-transform 0.15s !important;
+    -moz-transition:    -moz-transform    0.15s !important;
+    -ms-transition:     -ms-transform     0.15s !important;
+    -o-transition:      -o-transform      0.15s !important;
+    transition:         transform         0.15s !important;
+}
+
 .modal-header,
 .modal-body,
 .modal-footer {
     background-color: #390c50 !important;
-}
-
-#open-project-button,
-#visit-repo-button {
-    font-weight: bold;
-}
-
-#open-project-button {
-    border-color: white;
-}
-
-#open-project-button,
-#visit-repo-button {
-    text-decoration: none;
-}
-
-#open-project-button :hover,
-#visit-repo-button :hover {
-    color: #390c50 !important;
 }
 
 .modal-header :hover,
@@ -37,12 +28,17 @@
     text-align: center;
 }
 
-/* Modal speed */
-.modal.fade .modal-dialog
-{
-    -webkit-transition: -webkit-transform 0.15s !important;
-    -moz-transition:    -moz-transform    0.15s !important;
-    -ms-transition:     -ms-transform     0.15s !important;
-    -o-transition:      -o-transform      0.15s !important;
-    transition:         transform         0.15s !important;
+#open-project-button {
+    border-color: white;
+}
+
+#open-project-button,
+#visit-repo-button {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#open-project-button :hover,
+#visit-repo-button :hover {
+    color: #390c50 !important;
 }

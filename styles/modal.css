@@ -8,6 +8,11 @@
     transition:         transform         0.15s !important;
 }
 
+.modal-title,
+.modal-body {
+    color: white;
+}
+
 .modal-header,
 .modal-body,
 .modal-footer {

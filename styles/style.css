@@ -29,11 +29,15 @@ hr {
 }
 
 #personal-page {
-    background-color: rgba(131, 85, 21, 0.47);
+    background-color: rgba(143, 83, 14, 0.4);
     font-style: oblique;
 }
 
 #personal-page:hover {
+    background-color: rgba(143, 83, 14, 0.7);
+}
+
+#personal-page:active {
     background-color: rgba(143, 83, 14, 1);
 }
 
@@ -51,9 +55,13 @@ hr {
 }
 
 .project-link:hover {
-    background-color: rgba(30, 6, 43, 1);
+    background-color: rgba(30, 6, 43, 0.5);
     cursor: pointer;
     color: white;
+}
+
+.project-link:active:not(#personal-page) {
+    background-color: rgba(30, 6, 43, 1);
 }
 
 .project-link-notes {
@@ -85,22 +93,26 @@ footer {
     color: #bda9c6 !important;
 }
 
-#contact-me-button:hover {
-    background-color: rgba(143, 83, 14, 1);
-}
-
 #contact-me-button {
     border: 3px rgba(30, 6, 43, 0.16) solid !important;
     border-radius: 10px;
     margin-top: 20px;
     display: inline-block;
-    background-color: rgba(131, 85, 21, 0.47);
+    background-color: rgba(131, 85, 21, 0.4);
     margin-top: 10px;
     font-weight: bold;
     text-decoration: none;
     padding: 7px;
     border: solid 3px transparent;
     color: white;
+}
+
+#contact-me-button:hover {
+    background-color: rgba(143, 83, 14, 0.7);
+}
+
+#contact-me-button:active {
+    background-color: rgba(143, 83, 14, 1);
 }
 
 #year {

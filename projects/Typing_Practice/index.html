@@ -20,16 +20,24 @@
         <h3 id="description">Improve typing speed by typing words.</h3>
     </div>
 
+    <div class="margin-title-content"></div>
+
     <main class="center">
-        <button id="button-start" onclick="start()">Start Typing!</button>
+        <button id="button-start" onclick="start()">
+            Start Typing!
+        </button>
 
         <div id="random-word-wrapper">
             <div hidden id="random-word-box"></div>
         </div>
 
+        <!-- for mobile devices only -->
         <div id="mobile-input"></div>
+        <!-- ----------------------- -->
 
-        <button hidden id="button-stop" onclick="stop()">Stop Typing!</button>
+        <button hidden id="button-stop" onclick="stop()">
+            Stop Typing!
+        </button>
 
         <div hidden id="score-container">
             <div id="wpm">

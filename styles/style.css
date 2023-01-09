@@ -4,9 +4,9 @@ body {
     background-image: url('../images/pala.png');
 }
 
-/* * {
-    color: white !important;
-} */
+body.modal-open {
+    overflow-y: scroll !important;
+}
 
 #main-title {
     display: block;

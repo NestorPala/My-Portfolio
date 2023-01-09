@@ -3,6 +3,7 @@
 */
 
 const modals = document.getElementsByClassName("modal");
+let open = false;
 
 Array.prototype.forEach.call(modals, modal => {
     // Create an observer instance
@@ -15,9 +16,13 @@ Array.prototype.forEach.call(modals, modal => {
                 if (modalIsShowing) {
                     console.log("SHOW");
                     moveBackground(false);
+                    open = true;
                 } else {
-                    console.log("HIDE");
-                    moveBackground(true);
+                    if (open === true) {
+                        console.log("HIDE");
+                        moveBackground(true);
+                        open = false;
+                    }
                 }
             }
         });

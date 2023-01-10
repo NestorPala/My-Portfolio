@@ -4,7 +4,7 @@ const repoLinks = {
     "personal-page": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
     "todolist": "https://github.com/NestorPala/To-Do-List",
     "typing-practice": "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice",
-    "e-commerce-app": "https://github.com/NestorPala/E-Commerce-App-Backend"
+    "e-commerce-app": "https://github.com/NestorPala/Products-App"
 };
 
 Array.prototype.forEach.call(projectLinks, element => {

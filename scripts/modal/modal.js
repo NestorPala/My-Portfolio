@@ -14,8 +14,8 @@ Array.prototype.forEach.call(projectLinks, element => {
                     ? null : 'target="_blank"';
     const href = repoLinks[element.id];
     const messages = [
-        "Open this project",
-        "Do you want to open the project or to review the code in its repository?",
+        "Project: ",
+        "Do you want to open the app or to review its source code in the repository?",
         "Show me the app!",
         "Visit Repo"
     ];
@@ -32,7 +32,8 @@ Array.prototype.forEach.call(projectLinks, element => {
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="${element.id}ModalLabel">
-                            ${messages[0]}
+                            ${messages[0]} &nbsp; 
+                            <span style="font-weight: bold;">${element.innerHTML}</span>
                         </h5>
                         <button 
                         type="button" 
@@ -51,7 +52,7 @@ Array.prototype.forEach.call(projectLinks, element => {
                                 ${messages[2]}
                             </button>
                         </a>
-                        <a href="${href}">
+                        <a target="_blank" href="${href}">
                             <button type="button" id="visit-repo-button" class="btn">
                                 ${messages[3]}
                             </button>

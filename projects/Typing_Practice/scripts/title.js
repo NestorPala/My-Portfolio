@@ -1,7 +1,10 @@
 const title = "Typing Practice";
-let titleTypingPractice = document.getElementById("title-typing-practice");
-let aestheticWriterCursor = document.getElementById("aesthetic-writer-cursor");
+
+const mainTitleElement = document.getElementById("title-typing-practice");
+const aestheticWriterCursor = document.getElementById("aesthetic-writer-cursor");
 const timeMs = 200;
+const cursor = "_";
+const noCursor = "";
 
 function showTitle(index) {
     if (index == title.length) {
@@ -9,14 +12,16 @@ function showTitle(index) {
     }
     setTimeout(() => {
         if (index == 0) {
-            titleTypingPractice.innerHTML = title[index];
+            mainTitleElement.innerHTML = title[0];
         } else {
-            titleTypingPractice.innerHTML += title[index];
+            mainTitleElement.innerHTML += title[index];
         }
-        aestheticWriterCursor.innerHTML = aestheticWriterCursor.innerHTML == "" ? "_" : "";
+        const cursorStatus = aestheticWriterCursor.innerHTML;
+        aestheticWriterCursor.innerHTML = (cursorStatus === noCursor) ? cursor : noCursor;
         showTitle(index + 1);
     }, timeMs);
 }
 
-aestheticWriterCursor.innerHTML = "_";
+aestheticWriterCursor.innerHTML = cursor;
+
 showTitle(0);

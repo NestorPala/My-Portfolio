@@ -9,9 +9,9 @@ const repoLinks = {
 
 Array.prototype.forEach.call(projectLinks, element => {
     const modal = document.createElement("div");
-    const target = (element.id !== 'personal-page' 
-                    && !Array.from(element.classList).includes('no-deploy')) 
-                    ? 'target="_blank"' : null;
+    const target = (element.id === 'personal-page' 
+                    || Array.from(element.classList).includes('no-deploy')) 
+                    ? null : 'target="_blank"';
     const href = repoLinks[element.id];
     const messages = [
         "Open this project",

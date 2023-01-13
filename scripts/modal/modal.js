@@ -36,7 +36,7 @@ function addModals() {
                                 <p>Tools used:</p>
                                 <div id="project-tools-used">
                                     <!-- For example: React, Angular, Node, etc. -->
-                                    ${getProjectTools(element.id)}
+                                    ${getProjectToolsHTML(element.id)}
                                 </div>
                             </div>
                             <hr>
@@ -65,17 +65,24 @@ function addModals() {
     });
 }
 
-function getProjectTools(projectId) {
-    const toolImg = toolName => `
+function getProjectToolsHTML(projectId) {
+    const capitalize = str => str[0].toUpperCase() + str.substring(1);
+
+    const getToolImgHTML = toolName => `
         <img 
         src="images/tool-icons/${toolName}.png" 
         style="margin: 10px;"
         width="50" 
-        alt="${toolName}-logo">
+        alt="${toolName}-logo"
+        title="${capitalize(toolName)}"
+        >
     `;
 
-    let projectTools = ``;
-    projectWithId(projectId)["tools-used"].forEach(t => projectTools += toolImg(t));
+    const project = projectWithId(projectId);
+    const toolsUsed = project["tools-used"];
 
-    return projectTools;
+    let projectToolsHTML = ``;
+    toolsUsed.forEach(tool => projectToolsHTML += getToolImgHTML(tool));
+
+    return projectToolsHTML;
 }

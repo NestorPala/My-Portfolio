@@ -1,21 +1,18 @@
 const speed = 0.07;
 const ms = 16;
-const x_Limit = 10000;
+const limitX = 10000;
 let x = 1;
 let moveInterval;
 
-function move() {
+function moveBackground(on = true) {
     const bodyElements = document.querySelectorAll("body");
 
-    bodyElements.forEach(function (element) {
-        const newPosition = (x * speed) % x_Limit + "% 200px";
-        element.style.backgroundPosition = newPosition;
+    const move = () => bodyElements.forEach((element) => {
+        const positionX = (++x * speed) % limitX + '%';
+        const positionY = "200px";
+        element.style.backgroundPosition = `${positionX} ${positionY}`;
     });
 
-    x++;
-}
-
-function moveBackground(on = true) {
     if(on === true) {
         moveInterval = setInterval(move, ms);
     } else {

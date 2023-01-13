@@ -6,7 +6,7 @@ const projects = [
         repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page"
     },
     {
-        id: "todolist",
+        id: "todo-list",
         href: "projects/To-Do_List/",
         buttonText: "To-Do List",
         repoLink: "https://github.com/NestorPala/To-Do-List"
@@ -18,7 +18,7 @@ const projects = [
         repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice"
     },
     {
-        id: "e-commerce-app",
+        id: "product-list",
         href: "https://products-app-7ssx.onrender.com",
         buttonText: "Product List",
         repoLink: "https://github.com/NestorPala/Products-App" 

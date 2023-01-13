@@ -201,6 +201,13 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
+ul {
+  list-style-type: none !important;
+  margin-inline-start: 0 !important;
+  margin-block-start: 0 !important;
+  padding-inline-start: 0 !important;
+}
+
 @media (max-width: 600px) {
   #my-name {
     font-size: 2em;

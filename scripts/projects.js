@@ -4,37 +4,54 @@ const projects = [
         href: "projects/Personal_Page/",
         buttonText: "About me",
         repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
-        deployed: true
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript",
+        ]
     },
     {
         id: "todo-list",
         href: "projects/To-Do_List/",
         buttonText: "To-Do List",
         repoLink: "https://github.com/NestorPala/To-Do-List",
-        deployed: true
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript", "angular", "typescript"
+        ]
     },
     {
         id: "typing-practice",
         href: "projects/Typing_Practice/",
         buttonText: "Typing Practice",
         repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice",
-        deployed: true
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript",
+        ]
     },
     {
         id: "product-list",
         href: "https://products-app-7ssx.onrender.com",
         buttonText: "Product List",
         repoLink: "https://github.com/NestorPala/Products-App",
-        deployed: true 
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript", "angular", "typescript", "node", "express", "mongodb"
+        ] 
     },
     {
         id: "notes-app",
         href: "https://notes-app-81r1.onrender.com",
         buttonText: "Notes App (React)",
         repoLink: "https://github.com/NestorPala/Notes-App",
-        deployed: true 
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript", "react", "node", "express", "mongodb"
+        ]
     },
 ];
+
+const projectWithId = id => projects.filter(project => project["id"] === id)[0];
 
 const repoLinks = {};
 projects.map(project => repoLinks[project["id"]] = project["repoLink"]);

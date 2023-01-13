@@ -7,13 +7,7 @@ function addModals() {
                         || Array.from(element.classList).includes('no-deploy')) 
                         ? null : 'target="_blank"';
         const href = repoLinks[element.id];
-        const messages = [
-            "Project: ",
-            "Do you want to open the app or to review its source code in the repository?",
-            "Show me the app!",
-            "Visit Repo"
-        ];
-    
+
         modal.innerHTML = `    
             <!-- Modal -->
             <div 
@@ -26,7 +20,7 @@ function addModals() {
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="${element.id}ModalLabel">
-                                ${messages[0]} &nbsp; 
+                                Project: &nbsp; 
                                 <span style="font-weight: bold;">${element.innerHTML}</span>
                             </h5>
                             <button 
@@ -38,25 +32,50 @@ function addModals() {
                             </button>
                         </div>
                         <div class="modal-body">
-                            ${messages[1]}
+                            <div class="row">
+                                <p>Tools used:</p>
+                                <div id="project-tools-used">
+                                    <!-- For example: React, Angular, Node, etc. -->
+                                    ${getProjectTools(element.id)}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                Do you want to open the app or to review its source code in the repository?
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <a ${target} href="${element.href}">
                                 <button type="button" id="open-project-button" class="btn">
-                                    ${messages[2]}
+                                    Show me the app!
                                 </button>
                             </a>
                             <a target="_blank" href="${href}">
                                 <button type="button" id="visit-repo-button" class="btn">
-                                    ${messages[3]}
+                                    Visit Repo
                                 </button>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>`
-        ;
+            </div>
+        `;
     
         document.body.appendChild(modal);
     });
+}
+
+function getProjectTools(projectId) {
+    const toolImg = toolName => `
+        <img 
+        src="images/tool-icons/${toolName}.png" 
+        style="margin: 10px;"
+        width="50" 
+        alt="${toolName}-logo">
+    `;
+
+    let projectTools = ``;
+    projectWithId(projectId)["tools-used"].forEach(t => projectTools += toolImg(t));
+
+    return projectTools;
 }

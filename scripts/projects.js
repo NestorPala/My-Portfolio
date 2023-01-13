@@ -6,7 +6,7 @@ const projects = [
         repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
         deployed: true,
         "tools-used": [
-            "html", "css", "javascript",
+            "html", "css", "javascript", "bootstrap"
         ]
     },
     {

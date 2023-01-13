@@ -24,14 +24,15 @@
   font-style: italic;
   text-decoration: dashed underline;
   display: block;
-  padding: 5vh;
+  margin-top: 7vh;
+  margin-bottom: 5vh;
 }
 
-a,
+.link,
 body,
 #contact-me,
 #go-to-top {
-  color: white;
+  color: white !important;
 }
 
 #contact-me {
@@ -69,39 +70,49 @@ body,
   border-style: solid;
 }
 
-#go-to-top img {
+#arrow-icon {
   width: 30px;
   height: 30px;
   filter: invert(72%) sepia(52%) saturate(1403%) hue-rotate(329deg) brightness(98%) contrast(94%);
 }
 
-h1,
-h2,
-h3 {
+#my-name {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 2rem;
+}
+
+#my-name,
+.hero-title {
   color: #ee20ee;
 }
 
-h3 {
+.hero-title {
   margin-top: 10px;
+  margin-bottom: 6vh;
 }
 
-h4 {
+.item {
+  margin-bottom: 10vh;
+}
+
+.item-title {
   color: rgb(243, 152, 64);
   font-size: 1.75em;
   font-weight: 500;
 }
 
-h5 {
+.item-content {
   font-weight: normal;
   font-size: medium;
 }
 
-a {
+.link {
   text-decoration: underline dotted white;
   text-underline-offset: 5px;
 }
 
-a:hover {
+.link:hover {
   color: rgb(243, 152, 64);
   text-decoration-color: rgb(243, 152, 64);
 }
@@ -113,27 +124,23 @@ html {
 body {
   background-position: 50% 0px;
   background-color: black;
-  font-family: 'Roboto Slab', Verdana, serif;
+  font-family: 'Roboto Slab', Verdana, serif !important;
   background-image: url("../images/background.jpg");
   margin-left: 0;
   margin-right: 0;
 }
 
-footer {
+.footer {
   text-align: center;
   margin-bottom: 10px;
 }
 
-hr {
-  border-style: none;
-}
-
-img {
+#pala-photo {
   width: 150px;
   height: 150px;
 }
 
-nav {
+#sections {
   text-align: center;
   margin-top: 30px;
 }
@@ -147,7 +154,7 @@ nav {
   backdrop-filter: blur(6px);
 }
 
-.container ul {
+.container .item-list {
   list-style-type: none;
   margin-left: -40px;
 }
@@ -155,6 +162,7 @@ nav {
 #container-intro {
   width: 60vw;
   margin: auto;
+  overflow-x: auto;
 }
 
 #main-page,
@@ -163,7 +171,7 @@ nav {
   text-decoration: none;
 }
 
-#hobbies-list li {
+#hobbies-list .item {
   display: inline-block;
   margin: 20px;
 }
@@ -175,8 +183,8 @@ nav {
   margin: 0px auto 0px auto;
 }
 
-#skills li:hover,
-#hobbies li:hover {
+#skills .item:hover,
+#hobbies .item:hover {
   transform: scale(1.25);
   cursor: default;
 }
@@ -201,8 +209,8 @@ nav {
     background-size: auto;
   }
 
-  h1,
-  h3 {
+  #my-name,
+  .hero-title {
     font-size: 2.5em;
   }
 }
@@ -223,11 +231,12 @@ nav {
   }
 
   body {
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-size: contain;
   }
 
-  h1,
-  h3 {
+  #my-name,
+  .hero-title {
     font-size: 3em;
   }
 }

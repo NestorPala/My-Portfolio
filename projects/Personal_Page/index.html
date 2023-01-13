@@ -13,6 +13,10 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Bootstrap 5.2.1 -->
+  <link href="../../styles/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body>
@@ -29,109 +33,108 @@
       </div>
     </div>
 
-    <nav>
+    <nav id="sections">
       <div class="section-button" id="section-education-button">Education</div>
       <div class="section-button" id="section-experience-button">Work Experience</div>
       <div class="section-button" id="section-skills-button">My Skills</div>
       <div class="section-button" id="section-hobbies-button">My Hobbies</div>
       <div class="section-button" id="section-resume-button">My CV/Resume</div>
       <br>
-      <a id="go-back" href="../../">Go back to Portfolio</a>
+      <a class="link" id="go-back" href="../../">Go back to Portfolio</a>
     </nav>
   </div>
 
-  <br><br>
-  <hr>
+  <div class="b-example-divider"></div>
 
   <div class="container">
     <div id="education" class="container-content">
-      <h3>Education</h3>
-      <ul>
-        <li>
-          <h4>2027</h4>
-          <h5>Computer Engineering Bachelor - University of Buenos Aires <i>(in progress)</i></h5>
+      <h3 class="hero-title">Education</h3>
+      <ul class="item-list">
+        <li class="item">
+          <h4 class="item-title">2027</h4>
+          <h5 class="item-content">Computer Engineering Bachelor - University of Buenos Aires <i>(in progress)</i></h5>
         </li>
-        <li>
-          <h4>2021</h4>
-          <h5>'Codo a Codo 4.0' Full Stack Web Development Course</h5>
+        <li class="item">
+          <h4 class="item-title">2021</h4>
+          <h5 class="item-content">'Codo a Codo 4.0' Full Stack Web Development Course</h5>
         </li>
-        <li>
-          <h4>2019</h4>
-          <h5>Computer Technician - ET N1 Otto Krause</h5>
+        <li class="item">
+          <h4 class="item-title">2019</h4>
+          <h5 class="item-content">Computer Technician - ET N1 Otto Krause</h5>
         </li>
       </ul>
     </div>
   </div>
 
-  <hr>
+  <div class="b-example-divider"></div>
 
   <div class="container">
     <div id="work-experience">
-      <h3>Work Experience</h3>
-      <ul>
-        <li>
-          <h4>2022</h4>
-          <h5>Teacher Assistant for Costa's "Algorithms and Programming I" course at UBA</h5>
+      <h3 class="hero-title">Work Experience</h3>
+      <ul class="item-list">
+        <li class="item">
+          <h4 class="item-title">2022</h4>
+          <h5 class="item-content">Teacher Assistant for Costa's "Algorithms and Programming I" course at UBA</h5>
         </li>
-        <li>
-          <h4>2021</h4>
-          <h5>Web Developer at Ombu Tech Services</h5>
+        <li class="item">
+          <h4 class="item-title">2021</h4>
+          <h5 class="item-content">Web Developer at Ombu Tech Services</h5>
         </li>
-        <li>
-          <h4>2019</h4>
-          <h5>Tech Support internship at Ministerio de Educación CABA</h5>
+        <li class="item">
+          <h4 class="item-title">2019</h4>
+          <h5 class="item-content">Tech Support internship at Ministerio de Educación CABA</h5>
         </li>
       </ul>
     </div>
   </div>
 
-  <hr>
+  <div class="b-example-divider"></div>
 
   <div class="container">
     <div id="skills">
-      <h3>My Skills</h3>
+      <h3 class="hero-title">My Skills</h3>
       <div>
-        <ul></ul>
+        <ul class="item-list"></ul>
       </div>
     </div>
   </div>
 
-  <hr>
+  <div class="b-example-divider"></div>
 
   <div class="container">
     <div id="hobbies">
-      <h3>My Hobbies</h3>
+      <h3 class="hero-title">My Hobbies</h3>
       <ul id="hobbies-list">
-        <li><a href="https://github.com/NestorPala">Programming</a></li>
-        <li>Listening to music</li>
-        <li><a href="https://steamcommunity.com/id/pala_arnold">Playing video games</a></li>
-        <li>Watching YouTube videos</li>
-        <li>Watching Twitch streams</li>
-        <li>Playing chess</li>
+        <li class="item"><a class="link" href="https://github.com/NestorPala">Programming</a></li>
+        <li class="item">Listening to music</li>
+        <li class="item"><a class="link" href="https://steamcommunity.com/id/pala_arnold">Playing video games</a></li>
+        <li class="item">Watching YouTube videos</li>
+        <li class="item">Watching Twitch streams</li>
+        <li class="item">Playing chess</li>
       </ul>
     </div>
   </div>
 
-  <hr>
+  <div class="b-example-divider"></div>
 
   <div class="container">
     <div id="resume">
-      <h3>My CV / Resume</h3>
-      <ul>
-        <li>
-          <h4>Curriculum Vitae (Spanish / Español)</h4>
-          <h5>
-            <a class="resume-link"
+      <h3 class="hero-title">My CV / Resume</h3>
+      <ul class="item-list">
+        <li class="item">
+          <h4 class="item-title">Curriculum Vitae (Spanish / Español)</h4>
+          <h5 class="item-content">
+            <a class="link resume-link"
               href="https://drive.google.com/file/d/1K9YXi1Hfsd5UZLOlTYXbfU2ZrZgenw9A/view?usp=sharing">
               ¡Haz click aquí para ver mi currículum!
             </a>
           </h5>
         </li>
         <br>
-        <li>
-          <h4>Resume (English / Inglés)</h4>
-          <h5>
-            <a class="resume-link"
+        <li class="item">
+          <h4 class="item-title">Resume (English / Inglés)</h4>
+          <h5 class="item-content">
+            <a class="link resume-link"
               href="https://drive.google.com/file/d/17TE-qNDfQVj159aE89VnFRFiHO23hajf/view?usp=sharing">
               Click here to see my resume!
             </a>
@@ -141,21 +144,20 @@
     </div>
   </div>
 
-  <hr>
-  <br>
+  <div class="b-example-divider"></div>
 
   <div class="container">
-    <footer>
-      <p><a id="main-page" href="../../">Nestor Fabian Palavecino Arnold</a>
+    <footer class="footer">
+      <p><a class="link" id="main-page" href="../../">Nestor Fabian Palavecino Arnold</a>
       <div id="year"></div>
       </p>
       <br>
-      <a id="contact-me" class="resume-link" href="https://www.linkedin.com/in/nestor-pala/">CONTACT ME!</a>
+      <a id="contact-me" class=" link resume-link" href="https://www.linkedin.com/in/nestor-pala/">CONTACT ME!</a>
       <br>
     </footer>
   </div>
 
-  <button id="go-to-top"><img src="./images/arrow-up.svg"></button>
+  <button id="go-to-top"><img id="arrow-icon" src="./images/arrow-up.svg"></button>
 
   <br>
 
@@ -165,6 +167,12 @@
   <script src="scripts/skills.js"></script>
   <script src="scripts/goToTop.js"></script>
   <script src="../../scripts/year.js"></script>
+
+  <!-- Bootstrap 5.2.1 -->
+  <script src="../../scripts/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+  </script>
 
 </body>
 

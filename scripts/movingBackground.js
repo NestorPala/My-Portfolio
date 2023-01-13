@@ -22,5 +22,3 @@ function moveBackground(on = true) {
         clearInterval(moveInterval);
     }
 }
-
-window.onload = () => moveBackground();

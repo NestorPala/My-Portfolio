@@ -21,32 +21,34 @@
 
 <body>
 
-  <div class="container" id="container-intro">
-    <div id="intro">
-      <img id="pala-photo" src="images/pala.png" alt="pala's photo">
-
-      <h1 id="my-name">Nestor Fabian Palavecino Arnold</h1>
-      <div id="my-description">
-        <p><em>Student, <strong>Computer Technician</strong> and Web Developer</em></p>
-        <p>I'm a Computer Engineering student at University of Buenos Aires. I like programming and listening to music.
-        </p>
+  <div class="hero" id="container-intro">
+    <div id="container-intro-content">
+      <div id="intro">
+        <img id="pala-photo" src="images/pala.png" alt="pala's photo">
+  
+        <h1 id="my-name">Nestor Fabian Palavecino Arnold</h1>
+        <div id="my-description">
+          <p><em>Student, <strong>Computer Technician</strong> and Web Developer</em></p>
+          <p>I'm a Computer Engineering student at University of Buenos Aires. I like programming and listening to music.
+          </p>
+        </div>
       </div>
+  
+      <nav id="sections">
+        <div class="section-button" id="section-education-button">Education</div>
+        <div class="section-button" id="section-experience-button">Work Experience</div>
+        <div class="section-button" id="section-skills-button">My Skills</div>
+        <div class="section-button" id="section-hobbies-button">My Hobbies</div>
+        <div class="section-button" id="section-resume-button">My CV/Resume</div>
+        <br>
+        <a class="link" id="go-back" href="../../">Go back to Portfolio</a>
+      </nav>
     </div>
-
-    <nav id="sections">
-      <div class="section-button" id="section-education-button">Education</div>
-      <div class="section-button" id="section-experience-button">Work Experience</div>
-      <div class="section-button" id="section-skills-button">My Skills</div>
-      <div class="section-button" id="section-hobbies-button">My Hobbies</div>
-      <div class="section-button" id="section-resume-button">My CV/Resume</div>
-      <br>
-      <a class="link" id="go-back" href="../../">Go back to Portfolio</a>
-    </nav>
   </div>
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
+  <div class="hero">
     <div id="education" class="container-content">
       <h3 class="hero-title">Education</h3>
       <ul class="item-list">
@@ -68,7 +70,7 @@
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
+  <div class="hero">
     <div id="work-experience">
       <h3 class="hero-title">Work Experience</h3>
       <ul class="item-list">
@@ -90,7 +92,7 @@
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
+  <div class="hero">
     <div id="skills">
       <h3 class="hero-title">My Skills</h3>
       <div>
@@ -101,7 +103,7 @@
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
+  <div class="hero">
     <div id="hobbies">
       <h3 class="hero-title">My Hobbies</h3>
       <ul id="hobbies-list">
@@ -117,7 +119,7 @@
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
+  <div class="hero">
     <div id="resume">
       <h3 class="hero-title">My CV / Resume</h3>
       <ul class="item-list">
@@ -155,8 +157,6 @@
   </footer>
 
   <button id="go-to-top"><img id="arrow-icon" src="./images/arrow-up.svg"></button>
-
-  <br>
 
   <script src="scripts/index.js"></script>
   <script src="scripts/pageSections.js"></script>

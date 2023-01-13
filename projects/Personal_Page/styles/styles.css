@@ -139,11 +139,6 @@ body {
   margin-right: 0;
 }
 
-.footer {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 #pala-photo {
   width: 150px;
   height: 150px;
@@ -196,6 +191,14 @@ body {
 #hobbies .item:hover {
   transform: scale(1.25);
   cursor: default;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 600px) {

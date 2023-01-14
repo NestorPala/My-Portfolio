@@ -16,7 +16,7 @@ const accuracyValue = document.getElementById('accuracy-value');
 let randomWordBox = document.getElementById('random-word-box');
 let input;
 
-let currentLetter = 0;
+let currentLetterIndex = 0;
 let typedCharacters = 0;
 let startTime = 0;
 let hits = 0;
@@ -100,7 +100,14 @@ function addNewWord() {
 }
 
 
+function paintLetter(letter, color) {
+    letter.setAttribute("style", `color: ${color};`);
+    scoreContainer.style.color = color;
+}
+
+
 function registerKey(event) {
+    const currentLetter = randomWordBox.childNodes[currentLetterIndex];
     let key;
 
     if (isMobileDevice()) {
@@ -109,35 +116,33 @@ function registerKey(event) {
         key = event.key;
     }
 
-    const letter = randomWordBox.childNodes[currentLetter];
+    const letter = currentLetter.innerHTML.toLowerCase();
+    const input = key.toLowerCase();
 
-    if (letter.innerHTML.toLowerCase() == key.toLowerCase()) {
-        letter.setAttribute("style", "color: " + CORRECT_LETTER + ";");
-        scoreContainer.style.color = CORRECT_LETTER;
+    if (letter === input) {
+        paintLetter(currentLetter, CORRECT_LETTER);
         hits += 1;
     } else {
-        letter.setAttribute("style", "color: " + WRONG_LETTER + ";");
-        scoreContainer.style.color = WRONG_LETTER;
+        paintLetter(currentLetter, WRONG_LETTER);
         misses += 1;
     }
 
     accuracyValue.innerHTML = getAccuracy();
-
-    currentLetter++;
-
+    currentLetterIndex++;
     calculateWPM();
     typedCharacters++;
-
     wpmValue.innerHTML = ((currentWpm >= 0) ? currentWpm : 0).toFixed(2);
+    
+    const lastLetterIndex = randomWordBox.childNodes.length - 1;
 
-    if (currentLetter == randomWordBox.childNodes.length) {
+    if (currentLetterIndex == lastLetterIndex + 1) {
         if (isMobileDevice()) {
             closeMobileKeyboard();
             openMobileKeyboard();
         }
         removeCurrentWord();
         addNewWord();
-        currentLetter = 0;
+        currentLetterIndex = 0;
     }
 }
 
@@ -184,7 +189,7 @@ function stop() {
     disableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
     resetScoreContainer();
 
-    currentLetter = 0;
+    currentLetterIndex = 0;
     typedCharacters = 0;
     startTime = 0;
     pauseMinutes = 0;
@@ -207,7 +212,7 @@ function start() {
     disableElements(description, startButton);
     enableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
 
-    currentLetter = 0;
+    currentLetterIndex = 0;
     typedCharacters = 0;
     startTime = Date.now();
     hits = 0;

@@ -42,9 +42,12 @@ const openMobileKeyboard = () => {
 const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
 
 
+const msToMinutes = ms => (ms / 1000) / 60;
+
+
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
 function calculateWPM() {
-    const minutesElapsed = (((Date.now() - startTime) / 1000) / 60) - pauseMinutes;
+    const minutesElapsed = msToMinutes(Date.now() - startTime) - pauseMinutes;
     const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
     currentWpm = calculatedWpm;
 }
@@ -143,16 +146,23 @@ function enableKeyRegister() {
 }
 
 
+function disableElements(...elements) {
+    elements.forEach(element => element.hidden = true);
+}
+
+
+function enableElements(...elements) {
+    elements.forEach(element => element.hidden = false);
+}
+
+
 function stop() {
     removeWord();
     disableKeyRegister();
 
-    description.hidden = false;
-    startButton.hidden = false;
-    randomWordBox.hidden = true;
-    stopButton.hidden = true;
-    pauseButton.hidden = true;
-    scoreContainer.hidden = true;
+    enableElements(description, startButton);
+    disableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
+
     scoreContainer.style.color = DEFAULT_LETTER_COLOR;
 
     currentLetter = 0;
@@ -173,12 +183,8 @@ function stop() {
 
 
 function start() {
-    description.hidden = true;
-    startButton.hidden = true;
-    randomWordBox.hidden = false;
-    stopButton.hidden = false;
-    pauseButton.hidden = false;
-    scoreContainer.hidden = false;
+    disableElements(description, startButton);
+    enableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
 
     currentLetter = 0;
     typedCharacters = 0;
@@ -194,19 +200,17 @@ function start() {
 
 
 function pause() {
-    stopButton.hidden = true;
-    pauseButton.hidden = true;
-    resumeButton.hidden = false;
+    disableElements(stopButton, pauseButton);
+    enableElements(resumeButton);
     pauseStartTime = Date.now();
     disableKeyRegister();
 }
 
 
 function resume() {
-    stopButton.hidden = false;
-    pauseButton.hidden = false;
-    resumeButton.hidden = true;
-    pauseMinutes += ((Date.now() - pauseStartTime) / 1000) / 60;
+    enableElements(stopButton, pauseButton);
+    disableElements(resumeButton);
+    pauseMinutes += msToMinutes(Date.now() - pauseStartTime);
     pauseStartTime = 0;
     enableKeyRegister();
 }

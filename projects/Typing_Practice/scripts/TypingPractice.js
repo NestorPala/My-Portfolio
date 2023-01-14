@@ -44,7 +44,7 @@ const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
 
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
 function calculateWPM() {
-    const minutesElapsed = ((Date.now() - startTime - pauseMinutes) / 1000) / 60;
+    const minutesElapsed = (((Date.now() - startTime) / 1000) / 60) - pauseMinutes;
     const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
     currentWpm = calculatedWpm;
 }
@@ -206,7 +206,7 @@ function resume() {
     pauseButton.hidden = false;
     resumeButton.hidden = true;
 
-    pauseMinutes = ((Date.now() - pauseStartTime) / 1000) / 60;
+    pauseMinutes += ((Date.now() - pauseStartTime) / 1000) / 60;
     pauseStartTime = 0;
 
     if (isMobileDevice()) {

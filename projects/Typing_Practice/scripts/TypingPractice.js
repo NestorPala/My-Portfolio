@@ -61,14 +61,6 @@ function openMobileKeyboard() {
 };
 
 
-// https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
-function calculateWPM() {
-    const minutesElapsed = msToMinutes(Date.now() - startTime) - pauseMinutes;
-    const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
-    currentWpm = calculatedWpm;
-}
-
-
 function getRandomWord() {
     const randomIndex = Math.floor(Math.random() * (wordList.length - 1));
     return wordList[randomIndex];
@@ -81,6 +73,35 @@ function removeCurrentWord() {
     randomWordBox.id = "random-word-box";
     randomWordBox.hidden = true;
     randomWordWrapper.appendChild(randomWordBox);
+}
+
+
+function paintLetter(letter, color) {
+    letter.setAttribute("style", `color: ${color};`);
+    scoreContainer.style.color = color;
+}
+
+
+function disableElements(...elements) {
+    elements.forEach(element => element.hidden = true);
+}
+
+
+function enableElements(...elements) {
+    elements.forEach(element => element.hidden = false);
+}
+
+
+function showMessage(msg) {
+    alert(msg);
+}
+
+
+// https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
+function calculateWPM() {
+    const minutesElapsed = msToMinutes(Date.now() - startTime) - pauseMinutes;
+    const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
+    currentWpm = calculatedWpm;
 }
 
 
@@ -97,12 +118,6 @@ function addNewWord() {
 
     randomWordBox.hidden = false;
     randomWordWrapper.appendChild(randomWordBox);
-}
-
-
-function paintLetter(letter, color) {
-    letter.setAttribute("style", `color: ${color};`);
-    scoreContainer.style.color = color;
 }
 
 
@@ -178,21 +193,6 @@ function enableKeyRegister() {
     } else {
         window.addEventListener('keydown', registerKey);
     }
-}
-
-
-function disableElements(...elements) {
-    elements.forEach(element => element.hidden = true);
-}
-
-
-function enableElements(...elements) {
-    elements.forEach(element => element.hidden = false);
-}
-
-
-function showMessage(msg) {
-    alert(msg);
 }
 
 

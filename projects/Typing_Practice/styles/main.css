@@ -70,7 +70,9 @@ input {
 }
 
 #button-start,
-#button-stop {
+#button-stop,
+#button-pause,
+#button-resume {
     cursor: pointer;
     border-style: solid;
     border-radius: 10px;

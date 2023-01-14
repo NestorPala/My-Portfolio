@@ -95,12 +95,16 @@ body,
   margin-bottom: 6vh;
 }
 
-.item:not(:last-of-type) {
+.item:not(:last-of-type, #cv) {
   margin-bottom: 10vh;
 }
 
 .item:last-of-type {
-  margin-bottom: 5vh;
+  margin-bottom: 4vh;
+}
+
+#cv {
+  margin-bottom: 6vh;
 }
 
 .item-title {
@@ -145,7 +149,7 @@ body {
 .section-button,
 #contact-me {
   border-radius: 10px;
-  padding: 1.5vh;
+  padding: 1.25vh;
 }
 
 #pala-photo {
@@ -184,7 +188,7 @@ body {
 }
 
 #container-intro {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
   overflow-x: auto;
 }

@@ -43,12 +43,10 @@ const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
 
 
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
-// https://ubuntuincident.wordpress.com/2012/04/25/calculating-the-average-incrementally/
 function calculateWPM() {
     const minutesElapsed = ((Date.now() - startTime - pauseMinutes) / 1000) / 60;
     const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
-    const newWpmAverage = currentWpm + ((calculatedWpm - currentWpm)/(typedCharacters + 1));
-    currentWpm = newWpmAverage;
+    currentWpm = calculatedWpm;
 }
 
 
@@ -150,7 +148,7 @@ function stop() {
     
     alert("You have stopped typing");
     alert(`Your accuracy is ${getAccuracy()}%`);
-    alert("Your WPM is: " + currentWpm);
+    alert("Your WPM is: " + currentWpm.toFixed(2));
 
     currentWpm = 0;
     typedCharacters = 0;

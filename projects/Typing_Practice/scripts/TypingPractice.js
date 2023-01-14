@@ -97,6 +97,17 @@ function showMessage(msg) {
 }
 
 
+function scrollToTop() {
+    scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+}
+
+
+function resetMobileInput() {
+    closeMobileKeyboard();
+    openMobileKeyboard();
+}
+
+
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
 function calculateWPM() {
     const minutesElapsed = msToMinutes(Date.now() - startTime) - pauseMinutes;
@@ -156,10 +167,7 @@ function changeWord() {
     const lastLetterIndex = randomWordBox.childNodes.length - 1;
 
     if (currentLetterIndex == lastLetterIndex + 1) {
-        if (isMobileDevice()) {
-            closeMobileKeyboard();
-            openMobileKeyboard();
-        }
+        if (isMobileDevice() === true) resetMobileInput();
         removeCurrentWord();
         addNewWord();
         currentLetterIndex = 0;
@@ -216,7 +224,7 @@ function stop() {
     wpmValue.innerHTML = 0.00;
     accuracyValue.innerHTML = 0;
 
-    scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    scrollToTop();
 };
 
 
@@ -239,15 +247,17 @@ function start() {
 function pause() {
     disableElements(stopButton, pauseButton);
     enableElements(resumeButton);
-    pauseStartTime = Date.now();
     disableKeyRegister();
+
+    pauseStartTime = Date.now();
 }
 
 
 function resume() {
     enableElements(stopButton, pauseButton);
     disableElements(resumeButton);
+    enableKeyRegister();
+
     pauseMinutes += msToMinutes(Date.now() - pauseStartTime);
     pauseStartTime = 0;
-    enableKeyRegister();
 }

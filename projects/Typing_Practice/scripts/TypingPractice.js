@@ -5,6 +5,8 @@ const WRONG_LETTER = "red";
 const description = document.getElementById('description');
 const startButton = document.getElementById('button-start');
 const stopButton = document.getElementById('button-stop');
+const pauseButton = document.getElementById('button-pause');
+const resumeButton = document.getElementById('button-resume');
 let input;
 const mobileInput = document.getElementById('mobile-input');
 const randomWordWrapper = document.getElementById('random-word-wrapper');
@@ -14,8 +16,10 @@ let hits = 0;
 let misses = 0;
 let typedCharacters = 0;
 let startTime = 0;
-let currentTime = 0;
+let pauseStartTime = 0;
+let pauseMinutes = 0;
 const scoreContainer = document.getElementById('score-container');
+let currentWpm = 0;
 const wpmValue = document.getElementById("wpm-value");
 const accuracyValue = document.getElementById('accuracy-value');
 
@@ -39,9 +43,12 @@ const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
 
 
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
+// https://ubuntuincident.wordpress.com/2012/04/25/calculating-the-average-incrementally/
 function calculateWPM() {
-    const minutesElapsed = ((currentTime - startTime) / 1000) / 60;
-    return (((typedCharacters - misses) / 5) / minutesElapsed).toFixed(2);
+    const minutesElapsed = ((Date.now() - startTime - pauseMinutes) / 1000) / 60;
+    const calculatedWpm = ((typedCharacters - misses) / 5) / minutesElapsed;
+    const newWpmAverage = currentWpm + ((calculatedWpm - currentWpm)/(typedCharacters + 1));
+    currentWpm = newWpmAverage;
 }
 
 
@@ -100,10 +107,11 @@ function registerKey(event) {
     accuracyValue.innerHTML = getAccuracy();
 
     currentLetter++;
-    typedCharacters++;
-    currentTime = Date.now();
 
-    wpmValue.innerHTML = calculateWPM();
+    calculateWPM();
+    typedCharacters++;
+
+    wpmValue.innerHTML = currentWpm.toFixed(2);
 
     if (currentLetter == randomWordBox.childNodes.length) {
         if (isMobileDevice()) {
@@ -131,22 +139,21 @@ function stop() {
     startButton.hidden = false;
     randomWordBox.hidden = true;
     stopButton.hidden = true;
-
-    currentLetter = 0;
-
+    pauseButton.hidden = true;
     scoreContainer.hidden = true;
     scoreContainer.style.color = DEFAULT_LETTER_COLOR;
 
+    currentLetter = 0;
+    pauseMinutes = 0;
     accuracyValue.innerHTML = 0;
     wpmValue.innerHTML = 0.00;
 
     alert("You have stopped typing");
     alert(`Your accuracy is ${getAccuracy()}%`);
-
     alert("Your WPM is: " + calculateWPM());
+
     typedCharacters = 0;
     startTime = 0;
-    currentTime = 0;
 
     scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 };
@@ -157,20 +164,16 @@ function start() {
     startButton.hidden = true;
     randomWordBox.hidden = false;
     stopButton.hidden = false;
-
+    pauseButton.hidden = false;
     scoreContainer.hidden = false;
 
     currentLetter = 0;
     typedCharacters = 0;
-    startTime = 0;
-    currentTime = 0;
-
+    startTime = Date.now();
     hits = 0;
     misses = 0;
 
     addWord();
-
-    startTime = Date.now();
 
     if (isMobileDevice()) {
         openMobileKeyboard();
@@ -181,3 +184,36 @@ function start() {
 
     alert("You have started typing");
 };
+
+
+function pause() {
+    stopButton.hidden = true;
+    pauseButton.hidden = true;
+    resumeButton.hidden = false;
+
+    pauseStartTime = Date.now();
+
+    if (isMobileDevice()) {
+        closeMobileKeyboard();
+        window.removeEventListener('input', registerKey);
+    } else {
+        window.removeEventListener('keydown', registerKey);
+    }
+}
+
+
+function resume() {
+    stopButton.hidden = false;
+    pauseButton.hidden = false;
+    resumeButton.hidden = true;
+
+    pauseMinutes = ((Date.now() - pauseStartTime) / 1000) / 60;
+    pauseStartTime = 0;
+
+    if (isMobileDevice()) {
+        openMobileKeyboard();
+        window.addEventListener('input', registerKey);
+    } else {
+        window.addEventListener('keydown', registerKey);
+    }
+}

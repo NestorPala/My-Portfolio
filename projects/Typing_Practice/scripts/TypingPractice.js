@@ -172,6 +172,11 @@ function enableElements(...elements) {
 }
 
 
+function showMessage(msg) {
+    alert(msg);
+}
+
+
 function stop() {
     removeCurrentWord();
     disableKeyRegister();
@@ -184,9 +189,9 @@ function stop() {
     startTime = 0;
     pauseMinutes = 0;
     
-    alert("You have stopped typing");
-    alert(`Your accuracy is ${getAccuracy()}%`);
-    alert("Your WPM is: " + currentWpm.toFixed(2));
+    showMessage("You have stopped typing");
+    showMessage(`Your accuracy is ${getAccuracy()}%`);
+    showMessage(`Your WPM is: ${currentWpm.toFixed(2)}`);
 
     currentWpm = 0;
     wpmValue.innerHTML = 0.00;
@@ -208,7 +213,7 @@ function start() {
     hits = 0;
     misses = 0;
 
-    alert("You have started typing");
+    showMessage("You have started typing");
 };
 
 

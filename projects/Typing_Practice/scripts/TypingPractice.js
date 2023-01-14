@@ -7,42 +7,58 @@ const startButton = document.getElementById('button-start');
 const stopButton = document.getElementById('button-stop');
 const pauseButton = document.getElementById('button-pause');
 const resumeButton = document.getElementById('button-resume');
-let input;
 const mobileInput = document.getElementById('mobile-input');
 const randomWordWrapper = document.getElementById('random-word-wrapper');
-let randomWordBox = document.getElementById('random-word-box');
-let currentLetter = 0;
-let hits = 0;
-let misses = 0;
-let typedCharacters = 0;
-let startTime = 0;
-let pauseStartTime = 0;
-let pauseMinutes = 0;
 const scoreContainer = document.getElementById('score-container');
-let currentWpm = 0;
 const wpmValue = document.getElementById("wpm-value");
 const accuracyValue = document.getElementById('accuracy-value');
 
+let randomWordBox = document.getElementById('random-word-box');
+let input;
+
+let currentLetter = 0;
+let typedCharacters = 0;
+let startTime = 0;
+let hits = 0;
+let misses = 0;
+let pauseStartTime = 0;
+let pauseMinutes = 0;
+let currentWpm = 0;
 
 
-const isMobileDevice = () => window.matchMedia("only screen and (max-width: 760px)").matches;
+function isMobileDevice() {
+    const matchesMobileScreen = window.matchMedia("only screen and (max-width: 760px)").matches;
+    return matchesMobileScreen === true;
+}
 
 
-const closeMobileKeyboard = () => mobileInput.removeChild(input);
+function getAccuracy() {
+    const accuracyPercentage = Math.round(hits / (hits + misses) * 100);
+    return accuracyPercentage;
+}
 
 
-const openMobileKeyboard = () => {
+function msToMinutes(ms) {
+    return (ms / 1000) / 60;
+}
+
+
+function resetScoreContainer() {
+    scoreContainer.style.color = DEFAULT_LETTER_COLOR;
+}
+
+
+function closeMobileKeyboard() {
+    mobileInput.removeChild(input);
+}
+
+
+function openMobileKeyboard() {
     input = document.createElement("textarea");
     input.setAttribute("type", "text");
     mobileInput.appendChild(input);
     input.focus();
 };
-
-
-const getAccuracy = () => Math.round(hits / (hits + misses) * 100);
-
-
-const msToMinutes = ms => (ms / 1000) / 60;
 
 
 // https://indiatyping.com/index.php/typing-tips/typing-speed-calculation-formula
@@ -59,7 +75,7 @@ function getRandomWord() {
 }
 
 
-function removeWord() {
+function removeCurrentWord() {
     randomWordWrapper.removeChild(randomWordBox);
     randomWordBox = document.createElement("div");
     randomWordBox.id = "random-word-box";
@@ -68,7 +84,7 @@ function removeWord() {
 }
 
 
-function addWord() {
+function addNewWord() {
     const randomWord = getRandomWord();
 
     for (let i = 0; i < randomWord.length; i++) {
@@ -119,8 +135,8 @@ function registerKey(event) {
             closeMobileKeyboard();
             openMobileKeyboard();
         }
-        removeWord();
-        addWord();
+        removeCurrentWord();
+        addNewWord();
         currentLetter = 0;
     }
 }
@@ -157,32 +173,32 @@ function enableElements(...elements) {
 
 
 function stop() {
-    removeWord();
+    removeCurrentWord();
     disableKeyRegister();
-
     enableElements(description, startButton);
     disableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
-
-    scoreContainer.style.color = DEFAULT_LETTER_COLOR;
+    resetScoreContainer();
 
     currentLetter = 0;
+    typedCharacters = 0;
+    startTime = 0;
     pauseMinutes = 0;
-    accuracyValue.innerHTML = 0;
-    wpmValue.innerHTML = 0.00;
     
     alert("You have stopped typing");
     alert(`Your accuracy is ${getAccuracy()}%`);
     alert("Your WPM is: " + currentWpm.toFixed(2));
 
     currentWpm = 0;
-    typedCharacters = 0;
-    startTime = 0;
+    wpmValue.innerHTML = 0.00;
+    accuracyValue.innerHTML = 0;
 
     scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 };
 
 
 function start() {
+    addNewWord();
+    enableKeyRegister();
     disableElements(description, startButton);
     enableElements(randomWordBox, stopButton, pauseButton, scoreContainer);
 
@@ -191,9 +207,6 @@ function start() {
     startTime = Date.now();
     hits = 0;
     misses = 0;
-
-    addWord();
-    enableKeyRegister();
 
     alert("You have started typing");
 };

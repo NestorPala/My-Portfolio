@@ -109,7 +109,7 @@ function registerKey(event) {
     calculateWPM();
     typedCharacters++;
 
-    wpmValue.innerHTML = currentWpm.toFixed(2);
+    wpmValue.innerHTML = ((currentWpm >= 0) ? currentWpm : 0).toFixed(2);
 
     if (currentLetter == randomWordBox.childNodes.length) {
         if (isMobileDevice()) {
@@ -123,15 +123,29 @@ function registerKey(event) {
 }
 
 
-function stop() {
-    removeWord();
-
+function disableKeyRegister() {
     if (isMobileDevice()) {
         closeMobileKeyboard();
         window.removeEventListener('input', registerKey);
     } else {
         window.removeEventListener('keydown', registerKey);
     }
+}
+
+
+function enableKeyRegister() {
+    if (isMobileDevice()) {
+        openMobileKeyboard();
+        window.addEventListener('input', registerKey);
+    } else {
+        window.addEventListener('keydown', registerKey);
+    }
+}
+
+
+function stop() {
+    removeWord();
+    disableKeyRegister();
 
     description.hidden = false;
     startButton.hidden = false;
@@ -173,13 +187,7 @@ function start() {
     misses = 0;
 
     addWord();
-
-    if (isMobileDevice()) {
-        openMobileKeyboard();
-        window.addEventListener('input', registerKey);
-    } else {
-        window.addEventListener('keydown', registerKey);
-    }
+    enableKeyRegister();
 
     alert("You have started typing");
 };
@@ -189,15 +197,8 @@ function pause() {
     stopButton.hidden = true;
     pauseButton.hidden = true;
     resumeButton.hidden = false;
-
     pauseStartTime = Date.now();
-
-    if (isMobileDevice()) {
-        closeMobileKeyboard();
-        window.removeEventListener('input', registerKey);
-    } else {
-        window.removeEventListener('keydown', registerKey);
-    }
+    disableKeyRegister();
 }
 
 
@@ -205,14 +206,7 @@ function resume() {
     stopButton.hidden = false;
     pauseButton.hidden = false;
     resumeButton.hidden = true;
-
     pauseMinutes += ((Date.now() - pauseStartTime) / 1000) / 60;
     pauseStartTime = 0;
-
-    if (isMobileDevice()) {
-        openMobileKeyboard();
-        window.addEventListener('input', registerKey);
-    } else {
-        window.addEventListener('keydown', registerKey);
-    }
+    enableKeyRegister();
 }

@@ -106,18 +106,19 @@ function paintLetter(letter, color) {
 }
 
 
-function registerKey(event) {
-    const currentLetter = randomWordBox.childNodes[currentLetterIndex];
-    let key;
-
+function detectKeyByDevice(event) {
     if (isMobileDevice()) {
-        key = mobileInput.firstChild.value.slice(-1);
-    } else {
-        key = event.key;
-    }
+        return mobileInput.firstChild.value.slice(-1);
+    } 
+    return event.key;
+}
 
-    const letter = currentLetter.innerHTML.toLowerCase();
+
+function compareKeyWithLetter(event) {
+    const key = detectKeyByDevice(event);
     const input = key.toLowerCase();
+    const currentLetter = randomWordBox.childNodes[currentLetterIndex];
+    const letter = currentLetter.innerHTML.toLowerCase();
 
     if (letter === input) {
         paintLetter(currentLetter, CORRECT_LETTER);
@@ -126,13 +127,17 @@ function registerKey(event) {
         paintLetter(currentLetter, WRONG_LETTER);
         misses += 1;
     }
+}
 
+
+function registerPerformance() {
     accuracyValue.innerHTML = getAccuracy();
-    currentLetterIndex++;
     calculateWPM();
-    typedCharacters++;
     wpmValue.innerHTML = ((currentWpm >= 0) ? currentWpm : 0).toFixed(2);
-    
+}
+
+
+function changeWord() {
     const lastLetterIndex = randomWordBox.childNodes.length - 1;
 
     if (currentLetterIndex == lastLetterIndex + 1) {
@@ -144,6 +149,15 @@ function registerKey(event) {
         addNewWord();
         currentLetterIndex = 0;
     }
+}
+
+
+function registerKey(event) {
+    compareKeyWithLetter(event);
+    currentLetterIndex++;
+    typedCharacters++;
+    registerPerformance();
+    changeWord();
 }
 
 

@@ -147,12 +147,12 @@ function stop() {
     pauseMinutes = 0;
     accuracyValue.innerHTML = 0;
     wpmValue.innerHTML = 0.00;
-    currentWpm = 0;
-
+    
     alert("You have stopped typing");
     alert(`Your accuracy is ${getAccuracy()}%`);
-    alert("Your WPM is: " + calculateWPM());
+    alert("Your WPM is: " + currentWpm);
 
+    currentWpm = 0;
     typedCharacters = 0;
     startTime = 0;
 

@@ -4,3 +4,8 @@ window.onload = function () {
         a[i].setAttribute('target', '_blank');
     }
 };
+
+window.onscroll = () => {
+    parallax();
+    goToTopButton.hidden = window.scrollY === 0;
+};

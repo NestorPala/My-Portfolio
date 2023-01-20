@@ -1,8 +1,3 @@
-/*
-    Parallax effect extracted from:
-    https://stackoverflow.com/questions/29240028/css-make-a-background-image-scroll-slower-than-everything-else
-*/
-
 const backgroundSpeed = 0.2; //from 0.0 to 1.0
 const background = document.getElementById("background");
 
@@ -14,7 +9,7 @@ function parallax() {
     const documentHeight = document.body.scrollHeight;
     const windowYOffset = window.pageYOffset;
 
-    let speedFactor, widthFactor ,heightFactor;
+    let speedFactor, widthFactor, heightFactor;
 
     if (documentWidth < 500) {
         speedFactor = 0.43;
@@ -32,8 +27,8 @@ function parallax() {
     
     const newSpeed = backgroundSpeed * speedFactor;
     const newTop = windowYOffset * newSpeed;
-    const newWidth = widthFactor * newSpeed * (widthVH * (windowYOffset / documentWidth));
-    const newHeight = heightFactor * newSpeed * (heightVW * (windowYOffset / documentHeight));
+    const newWidth = widthFactor * newSpeed * widthVH * (windowYOffset / documentWidth);
+    const newHeight = heightFactor * newSpeed * heightVW * (windowYOffset / documentHeight);
 
     background.style.top = `-${newTop}px`;
     background.style.width = `calc(150% + ${widthVH + newWidth}vh)`;

@@ -10,12 +10,12 @@ function parallax() {
     let widthVH = 37.5;
     let heightVW = 40;
 
-
     const documentWidth = window.innerWidth;
     const documentHeight = document.body.scrollHeight;
     const windowYOffset = window.pageYOffset;
 
     let speedFactor, widthFactor ,heightFactor;
+
     if (documentWidth < 500) {
         speedFactor = 0.43;
         widthFactor = 1.0;
@@ -30,7 +30,7 @@ function parallax() {
         heightFactor = 5;   
     }
     
-    const newSpeed = backgroundSpeed / (1 / speedFactor);
+    const newSpeed = backgroundSpeed * speedFactor;
     const newTop = windowYOffset * newSpeed;
     const newWidth = widthFactor * newSpeed * (widthVH * (windowYOffset / documentWidth));
     const newHeight = heightFactor * newSpeed * (heightVW * (windowYOffset / documentHeight));

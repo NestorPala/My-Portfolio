@@ -141,7 +141,6 @@ body {
   background-position: 50% 0px;
   background-color: black;
   font-family: 'Roboto Slab', Verdana, serif !important;
-  background-image: url("../images/background.jpg");
   margin-left: 0;
   margin-right: 0;
 }
@@ -232,7 +231,22 @@ ul {
   padding-inline-start: 0 !important;
 }
 
+body, html {
+  height: 100%;
+}
+
+#background {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100% + 40vw);
+}
+
 @media (max-width: 600px) {
+  #background {
+    width: calc(100% + 45vh);
+  }
   #my-name {
     font-size: 2em;
   }
@@ -259,6 +273,9 @@ ul {
 }
 
 @media (min-width: 600px) {
+  #background {
+    width: calc(100% + 30vh);
+  }
   #my-name {
     font-size: 3em;
   }

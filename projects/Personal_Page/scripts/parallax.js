@@ -7,8 +7,8 @@ const backgroundSpeed = 0.2; //from 0.0 to 1.0
 const background = document.getElementById("background");
 
 function parallax() {
-    let widthVH = 37.5;
-    let heightVW = 40;
+    const widthVH = 37.5;
+    const heightVW = 40;
 
     const documentWidth = window.innerWidth;
     const documentHeight = document.body.scrollHeight;
@@ -38,5 +38,4 @@ function parallax() {
     background.style.top = `-${newTop}px`;
     background.style.width = `calc(150% + ${widthVH + newWidth}vh)`;
     background.style.height = `calc(150% + ${heightVW + newHeight}vw)`;
-
 }

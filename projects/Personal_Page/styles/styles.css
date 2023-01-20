@@ -240,13 +240,11 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  height: calc(100% + 40vw);
+  width: calc(150% + 37.5vh);
+  height: calc(150% + 40vw);
 }
 
 @media (max-width: 600px) {
-  #background {
-    width: calc(100% + 45vh);
-  }
   #my-name {
     font-size: 2em;
   }
@@ -273,9 +271,6 @@ body, html {
 }
 
 @media (min-width: 600px) {
-  #background {
-    width: calc(100% + 30vh);
-  }
   #my-name {
     font-size: 3em;
   }

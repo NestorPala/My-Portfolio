@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./fonts/montserrat/montserrat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Bootstrap 5.2.1 -->
@@ -18,9 +19,17 @@
 </head>
 
 <body>
-    <h1 class="main-title">
-        My Portfolio
-    </h1>
+    <div class="row main-title">
+        <div class="col-md-1 col-2" id="more-options">
+            <button>
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+        </div>
+        <div class="col-md-10 col-8" id="main-title-content">
+            <h1>My Portfolio</h1>
+        </div>
+        <div class="col-md-1 col-2"></div>
+    </div>
     <main>
         <div class="center" id="project-list">
             <!-- Projects are listed here -->

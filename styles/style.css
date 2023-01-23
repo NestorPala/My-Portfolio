@@ -9,6 +9,10 @@ body.modal-open {
     padding-right: 0px !important;
 }
 
+h1 {
+    all: unset !important;
+}
+
 button {
     font-family: "Montserrat", sans-serif;
 }
@@ -31,11 +35,16 @@ button:not(#open-project-button, #visit-repo-button):active {
     color: #390c50 !important;
 }
 
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 .main-title,
 .sub-title {
     display: block;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 5vh !important;
     margin-bottom: 10vh;
     color: white;
 }
@@ -43,11 +52,41 @@ button:not(#open-project-button, #visit-repo-button):active {
 .main-title {
     font-size: 3rem;
     font-weight: bold;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-title > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .sub-title {
     font-size: 1.25rem;
     font-weight: lighter;
+}
+
+#main-title-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#more-options {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#more-options button {
+    width: 50%;
+    height: 100%;
+    font-size: small;
+    border: none;
+    background-color: #ffffff00;
+    padding: 0 !important;
 }
 
 hr {
@@ -162,11 +201,17 @@ footer {
         height: 40vh;
         padding-top: 15vh !important;
     }
+    #main-title-content h1 {
+        font-size: 2rem !important;
+    }
 }
 
 @media (min-width: 600px) {
     body {
         background-size: 200px 200px;
+    }
+    #main-title-content h1 {
+        font-size: 3rem !important;
     }
 }
 

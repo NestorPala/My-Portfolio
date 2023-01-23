@@ -1,4 +1,8 @@
-const bodyElements = Array.from(document.querySelectorAll("body")[0].children).filter(e => !Array.from(e.classList).includes("main-title"));
+const bodyElements = document.querySelectorAll("body")[0].children;
+
+const bodyElementsExceptDropdown = Array.from(bodyElements).filter(element => {
+    return Array.from(element.classList).includes("main-title") === false;
+});
    
 const dropDownButton = document.getElementById("dropdownMenuButton1");
 const options = { attributes: true };
@@ -7,12 +11,12 @@ function callback(mutationList, observer) {
     mutationList.forEach(function(mutation) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
             if (Array.from(dropDownButton.classList).includes("show")) {
-                bodyElements.forEach(e => e.style.opacity = 0.3);
+                bodyElementsExceptDropdown.forEach(e => e.style.opacity = 0.3);
             } else {
-                bodyElements.forEach(e => e.style.opacity = 1.0);
+                bodyElementsExceptDropdown.forEach(e => e.style.opacity = 1.0);
             }
         }
-    })
+    });
 }
 
 const observer = new MutationObserver(callback);

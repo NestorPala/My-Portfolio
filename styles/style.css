@@ -80,6 +80,12 @@ button:not(#open-project-button, #visit-repo-button):active {
     padding-right: 0 !important;
 }
 
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #more-options button {
     width: 50%;
     height: 100%;

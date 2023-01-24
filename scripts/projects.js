@@ -36,7 +36,7 @@ const projects = [
         repoLink: "https://github.com/NestorPala/Products-App",
         deployed: true,
         "tools-used": [
-            "html", "css", "javascript", "angular", "typescript", "node", "express", "mongodb"
+            "html", "css", "javascript", "angular", "typescript", "node", "expressjs", "mongodb"
         ] 
     },
     {
@@ -46,7 +46,7 @@ const projects = [
         repoLink: "https://github.com/NestorPala/Notes-App",
         deployed: true,
         "tools-used": [
-            "html", "css", "javascript", "react", "node", "express", "mongodb"
+            "html", "css", "javascript", "react", "node", "expressjs", "mongodb"
         ]
     },
 ];

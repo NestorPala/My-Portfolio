@@ -3,7 +3,7 @@ const projects = [
         id: "personal-page",
         href: "projects/Personal_Page/",
         buttonText: "About me",
-        repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Personal_Page",
+        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/Personal_Page",
         deployed: true,
         "tools-used": [
             "html", "css", "javascript", "bootstrap"
@@ -23,7 +23,7 @@ const projects = [
         id: "typing-practice",
         href: "projects/Typing_Practice/",
         buttonText: "Typing Practice",
-        repoLink: "https://github.com/NestorPala/Web-Projects/tree/main/projects/Typing_Practice",
+        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/Typing_Practice",
         deployed: true,
         "tools-used": [
             "html", "css", "javascript",

@@ -14,9 +14,11 @@ function callback(mutationList, observer) {
             if (Array.from(dropDownButton.classList).includes("show")) {
                 bodyElementsExceptDropdown.forEach(e => e.style.opacity = 0.3);
                 mainTitle.style.color = "#735383";
+                moveBackground(false);
             } else {
                 bodyElementsExceptDropdown.forEach(e => e.style.opacity = 1.0);
                 mainTitle.style.color = "white";
+                moveBackground(true);
             }
         }
     });

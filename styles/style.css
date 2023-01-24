@@ -86,6 +86,39 @@ button:not(#open-project-button, #visit-repo-button):active {
     align-items: center;
 }
 
+.dropdown-menu {
+    border: 2px solid white !important;
+    background-color: #390c50 !important;
+}
+
+.dropdown-menu hr {
+    background-color: white !important;
+    width: 100%;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+.dropdown-item {
+    text-align: center !important;
+}
+
+li:first-of-type a {
+    color: white !important;
+}
+
+li:not(:first-of-type) a {
+    color: #a28dac !important;
+}
+
+.dropdown-item:hover {
+    color: #390c50 !important;
+}
+
+.dropdown-item:active {
+    background-color: #735383 !important;
+    color: white !important;
+}
+
 #more-options button {
     width: 50%;
     height: 100%;

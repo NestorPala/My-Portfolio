@@ -33,13 +33,20 @@ function addModals() {
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <p>Tools used:</p>
-                                <div id="project-tools-used">
-                                    <!-- For example: React, Angular, Node, etc. -->
-                                    ${getProjectToolsHTML(element.id)}
+                                <div class="col-6">
+                                    <p style="font-size: 1.25rem; margin-bottom: 10px;">Tools used:</p>
+                                </div>
+                                <div class="col-6">
+                                    <p id="${element.id}-tool-name" style="font-style: italic; margin-bottom: 0px; margin-top: 3px"></p>
                                 </div>
                             </div>
-                            <hr>
+                            <div class="row">
+                                <div id="project-tools-used">
+                                    <!-- For example: React, Angular, Node, etc. -->
+                                    ${getProjectToolsHTML(element)}
+                                </div>
+                            </div>
+                            <hr style="margin-top: 1vh; margin-bottom: 1vh;">
                             <div class="row">
                                 Do you want to open the app or to review its source code in the repository?
                             </div>
@@ -63,22 +70,49 @@ function addModals() {
     
         document.body.appendChild(modal);
     });
+
+    Array.prototype.forEach.call(projectLinks, element => {
+        const project = projectWithId(element.id);
+        const toolsUsed = project["tools-used"];
+
+        Array.prototype.forEach.call(toolsUsed, toolName => {
+            const toolContainer = document.getElementById(`${element.id}-${toolName}-tool-container`);
+            const toolNameElement = document.getElementById(`${element.id}-tool-name`);
+    
+            toolContainer.onmouseover = function(event) {
+                toolNameElement.innerText = toolContainer.className;
+                toolNameElement.hidden = false;
+            };
+            toolContainer.onmouseleave = function(event) {
+                toolNameElement.innerText = '';
+                toolNameElement.hidden = true;
+            };
+        })
+    });
 }
 
-function getProjectToolsHTML(projectId) {
+function getProjectToolsHTML(projectElement) {
     const capitalize = str => str[0].toUpperCase() + str.substring(1);
 
     const getToolImgHTML = toolName => `
-        <img 
-        src="images/tool-icons/${toolName}.png" 
-        style="margin: 10px;"
-        width="50" 
-        alt="${toolName}-logo"
-        title="${capitalize(toolName)}"
+        <a 
+        id="${projectElement.id}-${toolName}-tool-container"
+        class="${toolName}"
+        href="https://www.google.com/search?q=${toolName}" 
+        target="_blank"
+        style="color: rgba(0, 0, 0, 0);"
         >
+            <img 
+            src="images/tool-icons/${toolName}.png" 
+            style="margin: 10px;"
+            width="50" 
+            alt="${toolName}-logo"
+            title="${capitalize(toolName)}"
+            >
+        </a>
     `;
 
-    const project = projectWithId(projectId);
+    const project = projectWithId(projectElement.id);
     const toolsUsed = project["tools-used"];
 
     let projectToolsHTML = ``;

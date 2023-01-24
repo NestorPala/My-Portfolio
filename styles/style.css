@@ -90,6 +90,7 @@ button:not(#open-project-button, #visit-repo-button):active {
 .dropdown-menu {
     border: 2px solid white !important;
     background-color: #390c50 !important;
+    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .dropdown-menu hr {

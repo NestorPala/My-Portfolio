@@ -62,15 +62,24 @@ function addProjects() {
 
     for (const project of projects) {
         const projectList = document.getElementById("project-list");
-        const newProjectElement = document.createElement("a");
-    
-        newProjectElement.className = "project-link";
-        newProjectElement.id = project["id"];
-        newProjectElement.href = isDeployed(project) ? project["href"] : noDeployPage;
-        newProjectElement.dataset.bsToggle = "modal";
-        newProjectElement.dataset.bsTarget = `#${project["id"]}Modal`;
-        newProjectElement.innerText = project["buttonText"];
-    
-        projectList.appendChild(newProjectElement);
+
+            const newProject = document.createElement("a");
+            newProject.className = "project-link";
+            newProject.id = project["id"];
+            newProject.href = isDeployed(project) ? project["href"] : noDeployPage;
+            newProject.dataset.bsToggle = "modal";
+            newProject.dataset.bsTarget = `#${project["id"]}Modal`;
+
+                const newProjectText = document.createElement("div");
+                newProjectText.style.display = "flex";
+                newProjectText.style.justifyContent = "center";
+                newProjectText.style.alignItems = "center";
+                newProjectText.style.height = "100%";
+                newProjectText.style.width = "100%";
+                newProjectText.innerText = project["buttonText"];
+            
+            newProject.appendChild(newProjectText);
+        
+        projectList.appendChild(newProject);
     }
 }

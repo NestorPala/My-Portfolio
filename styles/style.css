@@ -240,7 +240,6 @@ footer {
     .project-link {
         width: 70vw;
         height: 40vh;
-        padding-top: 15vh !important;
     }
     #main-title-content h1 {
         font-size: 2rem !important;
@@ -266,7 +265,6 @@ footer {
     .project-link {
         width: 80vw;
         height: 25vh;
-        padding-top: 10vh !important;
     }
 }
 
@@ -274,6 +272,5 @@ footer {
     .project-link {
         width: 40vw;
         height: 25vh;
-        padding-top: 10vh !important;
     }
 }

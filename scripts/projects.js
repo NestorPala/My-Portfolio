@@ -51,11 +51,14 @@ const projects = [
     },
 ];
 
+
 const projectWithId = id => projects.filter(project => project["id"] === id)[0];
+
 
 const repoLinks = {};
 projects.map(project => repoLinks[project["id"]] = project["repoLink"]);
     
+
 function addProjects() {
     const noDeployPage = "messages/no-deploy.html";
     const isDeployed = project => project["deployed"] === true;

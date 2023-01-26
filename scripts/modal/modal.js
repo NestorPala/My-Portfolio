@@ -3,7 +3,7 @@ function addModals() {
 
     Array.prototype.forEach.call(projectLinks, element => {
         const modal = document.createElement("div");
-        const target = (element.id === 'personal-page' 
+        const target = (element.id === 'about-me' 
                         || Array.from(element.classList).includes('no-deploy')) 
                         ? null : 'target="_blank"';
         const href = repoLinks[element.id];

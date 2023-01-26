@@ -239,11 +239,10 @@ body {
 
 .tech-skill-item {
   cursor: default;
-  font-family: consolas, 'Roboto Slab', Verdana, serif;
-  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
   display: inline-block; 
   margin: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .footer {

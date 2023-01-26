@@ -164,7 +164,7 @@ hr {
     overflow: hidden;
     text-decoration: none;
     color: white;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
 }
 
 .project-link:hover {
@@ -218,6 +218,7 @@ footer {
     padding: 7px;
     border: solid 3px transparent;
     color: white;
+    backdrop-filter: blur(5px);
 }
 
 #contact-me-button:hover {

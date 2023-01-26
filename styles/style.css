@@ -140,16 +140,16 @@ hr {
     text-align: center;
 }
 
-#personal-page {
+#about-me {
     background-color: rgba(143, 83, 14, 0.4);
     font-style: oblique;
 }
 
-#personal-page:hover {
+#about-me:hover {
     background-color: rgba(143, 83, 14, 0.7);
 }
 
-#personal-page:active {
+#about-me:active {
     background-color: rgba(143, 83, 14, 1);
 }
 
@@ -173,7 +173,7 @@ hr {
     color: white;
 }
 
-.project-link:active:not(#personal-page) {
+.project-link:active:not(#about-me) {
     background-color: rgba(30, 6, 43, 1);
 }
 

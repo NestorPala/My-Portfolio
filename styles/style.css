@@ -109,7 +109,7 @@ li:first-of-type a {
 }
 
 li:not(:first-of-type) a {
-    color: #a28dac !important;
+    color: rgb(198, 115, 19) !important;
 }
 
 .dropdown-item:hover {

@@ -21,7 +21,7 @@ function addModals() {
                         <div class="modal-header">
                             <h5 class="modal-title" id="${element.id}ModalLabel">
                                 Project: &nbsp; 
-                                <span style="font-weight: bold;">${element.innerHTML}</span>
+                                <span style="font-weight: bold;">${element.innerText}</span>
                             </h5>
                             <button 
                             type="button" 

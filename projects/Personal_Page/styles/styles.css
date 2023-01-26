@@ -216,6 +216,36 @@ body {
   cursor: default;
 }
 
+#linkedin-link {
+  color: white;
+  text-decoration: underline dotted white !important;
+  text-underline-offset: 5px;
+}
+
+#linkedin-link:hover {
+  color: rgb(243, 152, 64) !important;
+  text-decoration-color: rgb(243, 152, 64) !important;
+}
+
+#linkedin-link:active {
+  color: rgb(184, 107, 34) !important;
+  text-decoration-color: rgb(184, 107, 34) !important;;
+}
+
+.in-progress {
+  color: #4091f4;
+  font-size: 2rem;
+}
+
+.tech-skill-item {
+  cursor: default;
+  font-family: consolas, 'Roboto Slab', Verdana, serif;
+  font-weight: 600;
+  display: inline-block; 
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
 .footer {
   text-align: center;
   padding-top: 10vh;

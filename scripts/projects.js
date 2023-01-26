@@ -1,9 +1,9 @@
 const projects = [
     {
-        id: "personal-page",
-        href: "projects/Personal_Page/",
+        id: "about-me",
+        href: "projects/About_Me/",
         buttonText: "About me",
-        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/Personal_Page",
+        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/About_Me",
         deployed: true,
         "tools-used": [
             "html", "css", "javascript", "bootstrap"

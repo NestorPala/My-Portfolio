@@ -13,7 +13,7 @@ function addDropdownObserver() {
         mutationList.forEach(function(mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 if (Array.from(dropDownButton.classList).includes("show")) {
-                    bodyElementsExceptDropdown.forEach(e => e.style.opacity = 0.7);
+                    bodyElementsExceptDropdown.forEach(e => e.style.opacity = 0.6);
                     moveBackground(false);
                 } else {
                     bodyElementsExceptDropdown.forEach(e => e.style.opacity = 1.0);

@@ -1,8 +1,14 @@
+const palaLogoSolid = `
+    <img 
+    src='./images/pala-logo-solid.png'
+    style="width: 1.75rem; height: 1.75rem; border-radius: 5px;">
+`;
+
 const projects = [
     {
         id: "about-me",
         href: "projects/About_Me/",
-        buttonText: "About me",
+        buttonText: `${palaLogoSolid} &nbsp; About me`,
         repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/About_Me",
         deployed: true,
         "tools-used": [
@@ -30,9 +36,9 @@ const projects = [
         ]
     },
     {
-        id: "product-list",
+        id: "products-app",
         href: "https://products-app-7ssx.onrender.com",
-        buttonText: "Product List",
+        buttonText: "Products App",
         repoLink: "https://github.com/NestorPala/Products-App",
         deployed: true,
         "tools-used": [
@@ -42,7 +48,7 @@ const projects = [
     {
         id: "notes-app",
         href: "https://notes-app-81r1.onrender.com",
-        buttonText: "Notes App (React)",
+        buttonText: "Notes App",
         repoLink: "https://github.com/NestorPala/Notes-App",
         deployed: true,
         "tools-used": [
@@ -79,7 +85,7 @@ function addProjects() {
                 newProjectText.style.alignItems = "center";
                 newProjectText.style.height = "100%";
                 newProjectText.style.width = "100%";
-                newProjectText.innerText = project["buttonText"];
+                newProjectText.innerHTML = project["buttonText"];
             
             newProject.appendChild(newProjectText);
         

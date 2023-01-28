@@ -1,6 +1,6 @@
 const palaLogoSolid = `
     <img 
-    src='./images/pala-logo-solid.png'
+    src='./images/pala-logo/pala-logo-solid.png'
     style="width: 1.75rem; height: 1.75rem; border-radius: 5px;">
 `;
 

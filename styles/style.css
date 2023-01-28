@@ -1,7 +1,7 @@
 body {
     background-color: #390c50 !important;
     font-family: "Montserrat", sans-serif !important;
-    background-image: url('../images/pala-logo-transparent.png');
+    background-image: url('../images/pala-logo/pala-logo-transparent.png');
 }
 
 body.modal-open {
@@ -71,6 +71,7 @@ button:not(#open-project-button, #visit-repo-button):active {
     justify-content: center;
     align-items: center;
     cursor: default;
+    letter-spacing: 2px;
 }
 
 #more-options {
@@ -205,6 +206,11 @@ footer {
 footer {
     color: #bda9c6 !important;
     cursor: default;
+}
+
+.pala-logo-min {
+    width: 50px;
+    margin-bottom: 2vh;
 }
 
 #contact-me-button {

@@ -253,6 +253,11 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
+.pala-logo-min {
+  width: 50px;
+  margin-bottom: 2vh;
+}
+
 ul {
   list-style-type: none !important;
   margin-inline-start: 0 !important;

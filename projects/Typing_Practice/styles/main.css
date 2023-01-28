@@ -167,6 +167,10 @@ footer {
 }
 /* --------------------------- */
 
+.pala-logo-min {
+    width: 50px;
+  }
+
 @media (max-width: 760px) {
     #keyboard-img {
         width: 75vw;

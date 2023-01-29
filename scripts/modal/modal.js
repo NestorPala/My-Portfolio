@@ -1,7 +1,7 @@
 function addModals() {
     const projectLinks = document.getElementsByClassName("project-link");
 
-    Array.prototype.forEach.call(projectLinks, element => {
+    Array.from(projectLinks).forEach(element => {
         const modal = document.createElement("div");
         const target = (element.id === 'about-me' 
                         || Array.from(element.classList).includes('no-deploy')) 
@@ -71,11 +71,11 @@ function addModals() {
         document.body.appendChild(modal);
     });
 
-    Array.prototype.forEach.call(projectLinks, element => {
+    Array.from(projectLinks).forEach(element => {
         const project = projectWithId(element.id);
         const toolsUsed = project["tools-used"];
 
-        Array.prototype.forEach.call(toolsUsed, toolName => {
+        Array.from(toolsUsed).forEach(toolName => {
             const toolContainer = document.getElementById(`${element.id}-${toolName}-tool-container`);
             const toolNameElement = document.getElementById(`${element.id}-tool-name`);
     

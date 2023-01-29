@@ -7,7 +7,7 @@ let modalOpen = false;
 let scrolled = 0;
 
 function addModalObservers() {
-    Array.prototype.forEach.call(modals, modal => {
+    Array.from(modals).forEach(modal => {
         // Create an observer instance
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {

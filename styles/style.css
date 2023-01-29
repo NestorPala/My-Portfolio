@@ -4,11 +4,6 @@ body {
     background-image: url('../images/pala-logo/pala-logo-transparent.png');
 }
 
-body.modal-open {
-    overflow-y: scroll !important;
-    padding-right: 0px !important;
-}
-
 h1 {
     all: unset !important;
 }
@@ -65,91 +60,8 @@ button:not(#open-project-button, #visit-repo-button):active {
     letter-spacing: 2px;
 }
 
-#main-nav-collapse-button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#main-nav-collapse-button button {
-    width: 10vh;
-    border: 2px solid white;
-    box-shadow: none !important;
-}
-
-#main-nav-collapse-button button:active {
-    transform: scale(1.1);
-    transition: 0.15s;
-}
-
-#main-nav-collapse-button .navbar-toggler-icon {
-    filter: brightness(0) invert(1);
-}
-
-#main-navbar {
-    background-color: rgba(30, 6, 43, 0.16) !important;
-    margin-bottom: 5vh;
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
-    backdrop-filter: blur(5px);
-}
-
-#main-navbar-item-list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-}
-
-.nav-link {
-    font-weight: bold !important;
-}
-
-.nav-link:hover {
-    transform: scale(1.25);
-    transition: 0.1s linear;
-}
-
-li:first-of-type a {
-    color: #22a6d3 !important;
-}
-
-li:first-of-type a:active {
-    transition: none;
-    color: #17718f !important;
-}
-
-li:not(:first-of-type) a {
-    color: rgb(198, 115, 19) !important;
-}
-
-li:not(:first-of-type) a:active {
-    transition: none;
-    color: rgb(134, 78, 13) !important;
-}
-
-hr {
-    width: 40%;
-    margin: 30px auto;
-    border-color: transparent !important;
-}
-
-.center {
+#project-list {
     text-align: center;
-}
-
-#about-me {
-    background-color: rgba(143, 83, 14, 0.4);
-}
-
-#about-me:hover {
-    background-color: rgba(143, 83, 14, 0.7);
-}
-
-#about-me:active {
-    background-color: rgba(143, 83, 14, 1);
 }
 
 .project-link {
@@ -178,10 +90,16 @@ hr {
     background-color: rgba(30, 6, 43, 1);
 }
 
-.project-link-notes {
-    margin-top: 10px;
-    font-size: 0.5em;
-    font-style: italic;
+#about-me {
+    background-color: rgba(143, 83, 14, 0.4);
+}
+
+#about-me:hover {
+    background-color: rgba(143, 83, 14, 0.7);
+}
+
+#about-me:active {
+    background-color: rgba(143, 83, 14, 1);
 }
 
 /* Footer always at the bottom */
@@ -217,29 +135,6 @@ footer {
     margin-bottom: 2vh;
 }
 
-#contact-me-button {
-    border: 3px rgba(30, 6, 43, 0.16) solid !important;
-    border-radius: 10px;
-    margin-top: 20px;
-    display: inline-block;
-    background-color: rgba(131, 85, 21, 0.4);
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 7px;
-    border: solid 3px transparent;
-    color: white;
-    backdrop-filter: blur(5px);
-}
-
-#contact-me-button:hover {
-    background-color: rgba(143, 83, 14, 0.7);
-}
-
-#contact-me-button:active {
-    background-color: rgba(143, 83, 14, 1);
-}
-
 #year {
     font-weight: lighter;
     font-size: small;
@@ -256,9 +151,6 @@ footer {
     #main-title-content h1 {
         font-size: 2rem !important;
     }
-    #hamburger-icon {
-        font-size: 1.5em;
-    }
 }
 
 @media (min-width: 600px) {
@@ -267,9 +159,6 @@ footer {
     }
     #main-title-content h1 {
         font-size: 3rem !important;
-    }
-    #hamburger-icon {
-        font-size: 2.5em;
     }
 }
 
@@ -285,19 +174,4 @@ footer {
         width: 40vw;
         height: 25vh;
     }
-}
-
-
-@media (max-width: 990px) {
-    #navbarSupportedContent {
-        margin-top: 3vh;
-    }
-}
-
-
-@media (min-width: 992px) {
-    #main-nav-collapse-button {
-        display: none !important;
-    }
-
 }

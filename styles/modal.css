@@ -1,3 +1,8 @@
+body.modal-open {
+    overflow-y: scroll !important;
+    padding-right: 0px !important;
+}
+
 /* Modal speed */
 .modal.fade .modal-dialog
 {
@@ -61,4 +66,8 @@ a:has(#visit-repo-button) :hover {
 a:has(#visit-repo-button) :active {
     border-color: #9c85a7;
     background-color: #9c85a7;
+}
+
+hr {
+    color: #390c50 !important;
 }

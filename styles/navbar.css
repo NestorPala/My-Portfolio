@@ -1,0 +1,78 @@
+#main-nav-collapse-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-nav-collapse-button button {
+    width: 10vh;
+    border: 2px solid white;
+    box-shadow: none !important;
+}
+
+#main-nav-collapse-button button:active {
+    transform: scale(1.1);
+    transition: 0.15s;
+}
+
+#main-nav-collapse-button .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+#main-navbar {
+    background-color: rgba(30, 6, 43, 0.16) !important;
+    margin-bottom: 5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    backdrop-filter: blur(5px);
+}
+
+#main-navbar-item-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.nav-link {
+    font-weight: bold !important;
+}
+
+.nav-link:hover {
+    transform: scale(1.25);
+    transition: 0.1s linear;
+}
+
+li:first-of-type a {
+    color: #22a6d3 !important;
+}
+
+li:first-of-type a:active {
+    transition: none;
+    color: #17718f !important;
+}
+
+li:not(:first-of-type) a {
+    color: rgb(198, 115, 19) !important;
+}
+
+li:not(:first-of-type) a:active {
+    transition: none;
+    color: rgb(134, 78, 13) !important;
+}
+
+@media (max-width: 990px) {
+    #navbarSupportedContent {
+        margin-top: 3vh;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #main-nav-collapse-button {
+        display: none !important;
+    }
+
+}

@@ -8,9 +8,8 @@ function addDropdownObserver() {
     const dropDownButton = document.getElementById("dropdownMenuButton1");
     const options = { attributes: true };
 
-    function callback(mutationList, observer) {
-        const mainTitle = document.getElementById("main-title-content");
-        mutationList.forEach(function(mutation) {
+    function callback(mutations) {
+        mutations.forEach(function(mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 if (Array.from(dropDownButton.classList).includes("show")) {
                     bodyElementsExceptDropdown.forEach(e => e.style.opacity = 0.6);

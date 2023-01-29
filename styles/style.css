@@ -65,18 +65,25 @@ button:not(#open-project-button, #visit-repo-button):active {
     letter-spacing: 2px;
 }
 
-.nav-collapse-button {
+#main-nav-collapse-button {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-collapse-button button {
+#main-nav-collapse-button button {
     width: 10vh;
+    border: 2px solid white;
+    box-shadow: none !important;
 }
 
-.nav-collapse-button .navbar-toggler-icon {
+#main-nav-collapse-button button:active {
+    transform: scale(1.1);
+    transition: 0.15s;
+}
+
+#main-nav-collapse-button .navbar-toggler-icon {
     filter: brightness(0) invert(1);
 }
 
@@ -105,15 +112,6 @@ button:not(#open-project-button, #visit-repo-button):active {
     transition: 0.1s linear;
 }
 
-#more-options {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    
-}
-
 li:first-of-type a {
     color: #22a6d3 !important;
 }
@@ -130,15 +128,6 @@ li:not(:first-of-type) a {
 li:not(:first-of-type) a:active {
     transition: none;
     color: rgb(134, 78, 13) !important;
-}
-
-#more-options button {
-    width: 50%;
-    height: 100%;
-    font-size: small;
-    border: none;
-    background-color: #ffffff00;
-    padding: 0 !important;
 }
 
 hr {
@@ -299,16 +288,16 @@ footer {
 }
 
 
-@media (max-width: 996px) {
+@media (max-width: 990px) {
     #navbarSupportedContent {
         margin-top: 3vh;
     }
 }
 
 
-@media (min-width: 996px) {
+@media (min-width: 992px) {
     #main-nav-collapse-button {
-        display: none;
+        display: none !important;
     }
 
 }

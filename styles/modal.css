@@ -68,6 +68,6 @@ a:has(#visit-repo-button) :active {
     background-color: #9c85a7;
 }
 
-hr {
+.modal hr {
     color: #390c50 !important;
 }

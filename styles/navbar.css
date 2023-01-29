@@ -69,7 +69,6 @@ li:not(:first-of-type) a:active {
     }
 }
 
-
 @media (min-width: 992px) {
     #main-nav-collapse-button {
         display: none !important;

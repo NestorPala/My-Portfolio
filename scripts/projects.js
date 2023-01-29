@@ -1,20 +1,4 @@
-const palaLogoSolid = `
-    <img 
-    src='./images/pala-logo/pala-logo-solid.png'
-    style="width: 1.75rem; height: 1.75rem; border-radius: 5px;">
-`;
-
 const projects = [
-    {
-        id: "about-me",
-        href: "projects/About_Me/",
-        buttonText: `${palaLogoSolid} &nbsp; About me`,
-        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/About_Me",
-        deployed: true,
-        "tools-used": [
-            "html", "css", "javascript", "bootstrap"
-        ]
-    },
     {
         id: "todo-list",
         href: "projects/To-Do_List/",
@@ -53,6 +37,16 @@ const projects = [
         deployed: true,
         "tools-used": [
             "html", "css", "javascript", "react", "node", "expressjs", "mongodb"
+        ]
+    },
+    {
+        id: "about-me",
+        href: "projects/About_Me/",
+        buttonText: `Personal page`,
+        repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/About_Me",
+        deployed: true,
+        "tools-used": [
+            "html", "css", "javascript", "bootstrap"
         ]
     },
 ];

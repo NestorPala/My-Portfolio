@@ -40,16 +40,12 @@ button:not(#open-project-button, #visit-repo-button):active {
     margin-right: 0 !important;
 }
 
-.main-title,
-.sub-title {
+.main-title {
     display: block;
     text-align: center;
     margin-top: 5vh !important;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     color: white;
-}
-
-.main-title {
     font-size: 3rem;
     font-weight: bold;
     justify-content: center;
@@ -61,17 +57,52 @@ button:not(#open-project-button, #visit-repo-button):active {
     padding-right: 0 !important;
 }
 
-.sub-title {
-    font-size: 1.25rem;
-    font-weight: lighter;
-}
-
 #main-title-content {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: default;
     letter-spacing: 2px;
+}
+
+.nav-collapse-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-collapse-button button {
+    width: 10vh;
+}
+
+.nav-collapse-button .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+#main-navbar {
+    background-color: rgba(30, 6, 43, 0.16) !important;
+    margin-bottom: 5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    backdrop-filter: blur(5px);
+}
+
+#main-navbar-item-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.nav-link {
+    font-weight: bold !important;
+}
+
+.nav-link:hover {
+    transform: scale(1.25);
+    transition: 0.1s linear;
 }
 
 #more-options {
@@ -83,44 +114,22 @@ button:not(#open-project-button, #visit-repo-button):active {
     
 }
 
-.dropdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropdown-menu {
-    border: 2px solid white !important;
-    background-color: #390c50 !important;
-    transition: 0.2s ease-out;
-}
-
-.dropdown-menu hr {
-    background-color: white !important;
-    width: 100%;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
-}
-
-.dropdown-item {
-    text-align: center !important;
-}
-
 li:first-of-type a {
-    color: white !important;
+    color: #22a6d3 !important;
+}
+
+li:first-of-type a:active {
+    transition: none;
+    color: #17718f !important;
 }
 
 li:not(:first-of-type) a {
     color: rgb(198, 115, 19) !important;
 }
 
-.dropdown-item:hover {
-    color: #390c50 !important;
-}
-
-.dropdown-item:active {
-    background-color: #735383 !important;
-    color: white !important;
+li:not(:first-of-type) a:active {
+    transition: none;
+    color: rgb(134, 78, 13) !important;
 }
 
 #more-options button {
@@ -171,7 +180,9 @@ hr {
 .project-link:hover {
     background-color: rgba(30, 6, 43, 0.5);
     cursor: pointer;
-    color: white;
+    color: #22a6d3;
+    transform: scale(1.1);
+    transition: 0.1s linear;
 }
 
 .project-link:active:not(#about-me) {
@@ -196,10 +207,14 @@ main {
     flex-grow: 1;
 }
 footer {
+    background-color: rgba(30, 6, 43, 0.16);
+    backdrop-filter: blur(5px);
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin: 5vh auto;
+    margin-top: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 /* --------------------------- */
 
@@ -281,4 +296,19 @@ footer {
         width: 40vw;
         height: 25vh;
     }
+}
+
+
+@media (max-width: 996px) {
+    #navbarSupportedContent {
+        margin-top: 3vh;
+    }
+}
+
+
+@media (min-width: 996px) {
+    #main-nav-collapse-button {
+        display: none;
+    }
+
 }

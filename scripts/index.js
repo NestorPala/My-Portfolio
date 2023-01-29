@@ -3,7 +3,6 @@ window.onload = () => {
     addProjects();
     addModals();
     addModalObservers();
-    addDropdownObserver();
 }
 
 // Prevent scroll when the modal is open while preserving current scroll status

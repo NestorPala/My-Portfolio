@@ -19,53 +19,65 @@
 
 <body>
     <div class="row main-title">
-        <div class="col-md-1 col-2" id="more-options">
-            <div class="dropdown">
-                <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i id="hamburger-icon" class="fa-solid fa-bars fa-xl"></i>
+        <div class="col-md-12 col-12" id="main-title-content">
+            <h1>My Portfolio</h1>
+        </div>
+    </div>
+    
+    <nav id="main-navbar" class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <div id="main-nav-collapse-button" class="nav-collapse-button">
+                <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <ul id="main-dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li>
-                        <a class="dropdown-item" href="https://github.com/NestorPala/My-Portfolio" target="_blank">
-                            Visit <strong>My Portfolio</strong> on GitHub
+            </div>
+            <div class="collapsable navbar-collapse collapse" id="navbarSupportedContent">
+                <ul id="main-navbar-item-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects/About_Me/">
+                            <img 
+                            src='./images/pala-logo/pala-logo-solid.png'
+                            style="width: 1.75rem; height: 1.75rem; border-radius: 5px;">
+                            &nbsp;
+                            About Me
                         </a>
                     </li>
-                    <hr>
-                    <li>
-                        <a class="dropdown-item" href="https://drive.google.com/file/d/1K9YXi1Hfsd5UZLOlTYXbfU2ZrZgenw9A/view?usp=sharing" target="_blank">
-                            <strong>My CV</strong>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://drive.google.com/file/d/1K9YXi1Hfsd5UZLOlTYXbfU2ZrZgenw9A/view?usp=sharing">My CV</a>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="https://drive.google.com/file/d/17TE-qNDfQVj159aE89VnFRFiHO23hajf/view?usp=sharing" target="_blank">
-                            <strong>My Resume</strong>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://drive.google.com/file/d/17TE-qNDfQVj159aE89VnFRFiHO23hajf/view?usp=sharing">My Resume</a>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="https://github.com/NestorPala" target="_blank">
-                            <strong>My GitHub</strong>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/nestor-pala/">My Linkedin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/NestorPala">Visit My Portfolio on GitHub</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="col-md-10 col-8" id="main-title-content">
-            <h1>My Portfolio</h1>
-        </div>
-        <div class="col-md-1 col-2"></div>
-    </div>
+    </nav>
+
     <main>
         <div class="center" id="project-list">
             <!-- Projects are listed here -->
         </div>
     </main>
-    <hr>
+
     <footer id="main-footer">
         <img class="pala-logo-min" src="./images/pala-logo/pala-logo-min.png">
         <p>Nestor Fabian Palavecino Arnold
         <div id="year"></div>
         </p>
-        <a id="contact-me-button" href="https://www.linkedin.com/in/nestor-pala/">MY LINKEDIN</a>
+        <!-- <a id="contact-me-button" href="https://www.linkedin.com/in/nestor-pala/">MY LINKEDIN</a> -->
     </footer>
 
     <script src="./scripts/projects.js"></script>
@@ -74,7 +86,6 @@
     <script src="./scripts/modal/modalShow.js"></script>
     <script src="./scripts/movingBackground.js"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/dropdown.js"></script>
 
     <!-- Bootstrap 5.2.1 -->
     <script src="./scripts/bootstrap.bundle.min.js" crossorigin="anonymous">

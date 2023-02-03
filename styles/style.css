@@ -130,6 +130,19 @@ footer {
     cursor: default;
 }
 
+#toggle-animation-button:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(143, 83, 14, 0.4);
+    transform: scale(1.1) rotate(180deg);
+    transition: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#toggle-animation-button:active {
+    background-color: rgba(143, 83, 14, 0.7);
+    transform: scale(0.9) rotate(180deg);
+}
+
 .pala-logo-min {
     width: 50px;
     margin-bottom: 2vh;

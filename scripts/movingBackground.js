@@ -3,6 +3,8 @@ const ms = 16;
 const limitX = 10000;
 let x = 1;
 let moveInterval;
+const toggleAnimationButton = document.getElementById("toggle-animation-button");
+let animationEnabled = true;
 
 function moveBackground(on = true) {
     const bodyElements = document.querySelectorAll("body");
@@ -14,8 +16,15 @@ function moveBackground(on = true) {
     });
 
     if(on === true) {
-        moveInterval = setInterval(move, ms);
+        if (animationEnabled === true) {
+            moveInterval = setInterval(move, ms);
+        }
     } else {
         clearInterval(moveInterval);
     }
 }
+
+toggleAnimationButton.onclick = function(event) {
+    animationEnabled = !animationEnabled;
+    moveBackground(animationEnabled);
+};

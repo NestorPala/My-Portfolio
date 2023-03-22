@@ -1,14 +1,8 @@
 #profession-list li {
-  display: inline-block;
   font-family: 'JetBrains Mono', monospace;
   font-size: large;
   font-weight: bold;
   color: #4091f4;
-}
-
-#profession-list li:not(:last-of-type)::after {
-  content: "  |  ";
-  white-space: pre;
 }
 
 #my-description-text {
@@ -335,6 +329,17 @@ body, html {
   #my-name,
   .hero-title {
     font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1106px) {
+  #profession-list li {
+    display: inline-block;
+  }
+  
+  #profession-list li:not(:last-of-type)::after {
+    content: "  |  ";
+    white-space: pre;
   }
 }
 

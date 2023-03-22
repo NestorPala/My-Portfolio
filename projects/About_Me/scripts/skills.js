@@ -40,6 +40,7 @@ for (const category in skills) {
 
     const categoryItems = document.createElement('ol');
     categoryItems.className = 'tech-skill-category-list';
+    categoryItems.style['padding-inline-start'] = '0px';
     categoryLi.appendChild(categoryItems);
 
     for (const item of skills[category]) {

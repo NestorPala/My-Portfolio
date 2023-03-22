@@ -1,7 +1,7 @@
 #profession-list li {
   display: inline-block;
-  font-family: consolas;
-  font-size: larger;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: large;
   font-weight: bold;
   color: #4091f4;
 }

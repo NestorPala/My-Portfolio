@@ -1,27 +1,53 @@
-const skills = [
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "JavaScript",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "PHP",
-    "Laravel",
-    "MySQL",
-    "Git",
-    "Python 3",
-    "C",
-    "TypeScript",
-    "React",
-    "Angular 2+",
-];
+const skills = {
+    frontend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Bootstrap",
+        "JQuery",
+        "Tailwind",
+        "SASS"
+    ],
+    backend: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "PHP",
+        "Laravel",
+        "Java",
+        "Spring Boot"
+    ],
+    'other skills': [
+        "TypeScript",
+        "Git",
+        "GitHub",
+        "Python 3",
+        "C language"
+    ]
+};
 
 const skillList = document.getElementById("skills").getElementsByTagName("ul")[0];
 
-for (const skill of skills) {
-    const li = document.createElement("li");
-    li.innerHTML = skill;
-    li.className = "tech-skill-item";
-    skillList.appendChild(li);
+for (const category in skills) {
+    const categoryLi = document.createElement('li');
+    categoryLi.className = 'tech-skill-category';
+
+    const categoryTitle = document.createElement('h4');
+    categoryTitle.innerText = category.charAt(0).toUpperCase() + category.slice(1);
+    categoryLi.appendChild(categoryTitle);
+
+    const categoryItems = document.createElement('ol');
+    categoryItems.className = 'tech-skill-category-list';
+    categoryLi.appendChild(categoryItems);
+
+    for (const item of skills[category]) {
+        const li = document.createElement("li");
+        li.innerHTML = item;
+        li.className = "tech-skill-category-item";
+        categoryItems.appendChild(li);
+    }
+
+    skillList.appendChild(categoryLi);
 }

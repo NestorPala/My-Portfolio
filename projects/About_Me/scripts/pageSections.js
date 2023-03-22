@@ -12,10 +12,6 @@ const pageSections = [
         sectionElementId: "skills"
     },
     {
-        sectionButtonId: "section-hobbies-button", 
-        sectionElementId: "hobbies"
-    },
-    {
         sectionButtonId: "section-resume-button", 
         sectionElementId: "resume"
     },

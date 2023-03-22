@@ -1,3 +1,25 @@
+#profession-list li {
+  display: inline-block;
+  font-family: consolas;
+  font-size: larger;
+  font-weight: bold;
+  color: #4091f4;
+}
+
+#profession-list li:not(:last-of-type)::after {
+  content: "  |  ";
+  white-space: pre;
+}
+
+#my-description-text {
+  display: flex;
+  justify-content: center;
+}
+
+#my-description-text p {
+  width: 70%;
+}
+
 .section-button {
   border-color: white;
   color: rgb(243, 152, 64);
@@ -21,7 +43,6 @@
 #go-back {
   color: white;
   border: none;
-  font-style: italic;
   text-decoration: dashed underline;
   display: block;
   margin-top: 8vh;
@@ -237,7 +258,20 @@ body {
   font-size: 2rem;
 }
 
-.tech-skill-item {
+.coming-soon {
+  color: white;
+}
+
+.tech-skill-category:not(:last-of-type) {
+  margin-bottom: 8vh;
+}
+
+.tech-skill-category h4 {
+  color: #e69141;
+  font-size: 1.75rem;
+}
+
+.tech-skill-category-item {
   cursor: default;
   font-family: 'JetBrains Mono', monospace;
   display: inline-block; 

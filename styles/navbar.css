@@ -38,14 +38,12 @@
 
 .nav-link {
     font-weight: bold !important;
+    font-size: larger !important;
 }
 
 .nav-link:hover {
     transform: scale(1.25);
     transition: 0.1s linear;
-}
-
-li:first-of-type a {
     color: #22a6d3 !important;
 }
 
@@ -54,7 +52,7 @@ li:first-of-type a:active {
     color: #17718f !important;
 }
 
-li:not(:first-of-type) a {
+li a {
     color: rgb(198, 115, 19) !important;
 }
 

@@ -42,7 +42,7 @@ const projects = [
     {
         id: "about-me",
         href: "projects/About_Me/",
-        buttonText: `Personal page`,
+        buttonText: `Personal Page`,
         repoLink: "https://github.com/NestorPala/My-Portfolio/tree/main/projects/About_Me",
         deployed: true,
         "tools-used": [
@@ -66,22 +66,22 @@ function addProjects() {
     for (const project of projects) {
         const projectList = document.getElementById("project-list");
 
-            const newProject = document.createElement("a");
-            newProject.className = "project-link";
-            newProject.id = project["id"];
-            newProject.href = isDeployed(project) ? project["href"] : noDeployPage;
-            newProject.dataset.bsToggle = "modal";
-            newProject.dataset.bsTarget = `#${project["id"]}Modal`;
+        const newProject = document.createElement("a");
+        newProject.className = "project-link";
+        newProject.id = project["id"];
+        newProject.href = isDeployed(project) ? project["href"] : noDeployPage;
+        newProject.dataset.bsToggle = "modal";
+        newProject.dataset.bsTarget = `#${project["id"]}Modal`;
 
-                const newProjectText = document.createElement("div");
-                newProjectText.style.display = "flex";
-                newProjectText.style.justifyContent = "center";
-                newProjectText.style.alignItems = "center";
-                newProjectText.style.height = "100%";
-                newProjectText.style.width = "100%";
-                newProjectText.innerHTML = project["buttonText"];
-            
-            newProject.appendChild(newProjectText);
+        const newProjectText = document.createElement("div");
+        newProjectText.style.display = "flex";
+        newProjectText.style.justifyContent = "center";
+        newProjectText.style.alignItems = "center";
+        newProjectText.style.height = "100%";
+        newProjectText.style.width = "100%";
+        newProjectText.innerHTML = project["buttonText"];
+    
+        newProject.appendChild(newProjectText);
         
         projectList.appendChild(newProject);
     }

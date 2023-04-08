@@ -17,10 +17,12 @@ const skills = {
         "PHP",
         "Laravel",
         "Java",
-        "Spring Boot"
+        "Spring Boot",
+        "Kotlin"
     ],
     'other skills': [
         "TypeScript",
+        "Postman",
         "Git",
         "GitHub",
         "Python 3",

@@ -25,5 +25,9 @@ function getExperienceYears(initialDate) {
     const date2 = Date.now();
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return (diffDays / 365).toFixed(0)
+
+    const expYears = (diffDays / 365).toFixed(1);
+    const decimal = expYears[expYears.length - 1];
+
+    return (decimal == '5') ? expYears : Number(expYears).toFixed(0);
 }

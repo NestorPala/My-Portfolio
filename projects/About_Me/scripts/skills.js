@@ -4,27 +4,27 @@ const skills = {
         "CSS",
         "JavaScript",
         "React",
-        "Bootstrap",
-        "JQuery",
-        "Tailwind",
-        "SASS"
+        "Bootstrap"
     ],
     backend: [
+        "Spring Boot",
         "Node.js",
         "Express.js",
-        "MongoDB",
-        "SQL",
-        "PHP",
         "Laravel",
-        "Java",
-        "Spring Boot",
-        "Kotlin"
+        "SQL",
+        "Redis",
+        "Docker"
     ],
-    'other skills': [
-        "TypeScript",
+    'more skills': [
+        "Kotlin",
+        "Java",
+        "Maven",
+        "Gradle",
+        "IntelliJ IDEA",
+        "VS Code",
         "Postman",
         "Git",
-        "GitHub",
+        "TypeScript",
         "Python 3",
         "C language"
     ]
